@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/matt-riley/cvcsv-cli/issues"
   },
@@ -23,9 +23,6 @@
   "devDependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.3",
-    "csv-parser": "2.3.0",
-    "csvtojson": "2.0.10",
-    "fast-csv": "3.4.0",
     "jest": "24.9.0",
     "sinon": "7.4.1",
     "ts-jest": "24.0.2",
