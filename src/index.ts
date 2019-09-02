@@ -1,4 +1,5 @@
 import { createObjectCsvWriter } from 'csv-writer';
+import globby from 'globby';
 
 export interface CsvData {
   'image-uri': string;
@@ -31,4 +32,16 @@ export const writeToFile = async (data: CsvData[], path: string) => {
   } catch (err) {
     throw new Error(err)
   }
-} 
+}
+
+export const readFiles = async (dirPath?: string) => {
+  const defaultPath = dirPath ? dirPath : './';
+  const paths = await globby(defaultPath, {
+    expandDirectories: {
+      files: ['*'],
+      extensions: ['jpg', 'jpeg', 'png']
+    }
+  });
+  return paths;
+}
+
