@@ -1,4 +1,4 @@
-import {readFiles} from '../src/index';
+import {readFiles} from '../src/readFiles';
 
 describe('readfiles', () => {
   it('uses the execution path as default', async() => {
