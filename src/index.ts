@@ -1,5 +1,6 @@
 import { createObjectCsvWriter } from 'csv-writer';
 import globby from 'globby';
+import path from 'path';
 
 export interface CsvData {
   'image-uri': string;
@@ -45,3 +46,23 @@ export const readFiles = async (dirPath?: string) => {
   return paths;
 }
 
+const buildData = async (bucketName: string, dirPath?: string) => {
+  const defaultPath = dirPath ? dirPath : '';
+  const paths = await readFiles(defaultPath);
+  const fileData: any[] = [];
+  paths.forEach((str) => {
+    const fileName = path.basename(str);
+    const dirName = path.dirname(str);
+    const bucketUri = `gs://${bucketName}`
+    fileData.push({
+      fileName: path.basename(str),
+      dirName: path.dirname(str),
+      fullPath: str,
+      "image-uri": `gs://${bucketName}/images${str.replace(defaultPath, '')}` 
+    })
+  })
+  console.log(fileData);
+
+}
+
+buildData('foo'); 
