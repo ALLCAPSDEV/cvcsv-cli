@@ -10,4 +10,4 @@ jobs:
       uses: actions/npm@master
       with:
         entrypoint: npm
-        args: run test
+        args: cit 
