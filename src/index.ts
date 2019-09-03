@@ -4,7 +4,6 @@ import {bucketQuestion, directoryQuestion, productCategoryQuestion, productSetQu
 import clear from 'clear';
 import {buildData} from './buildData';
 import {writeToFile} from './writeToFile';
-import { CLIAnswers } from './interfaces/CLI';
 
 clear();
 const logger = new Logger;

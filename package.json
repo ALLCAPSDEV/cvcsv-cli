@@ -1,12 +1,13 @@
 {
   "name": "cvcsv-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "./lib/index.js",
   "bin": {
     "cvcsv": "./bin/index.js"
   },
   "scripts": {
+    "build": "npm run clean:some && tsc -p .",
     "clean:lib": "rimraf ./lib",
     "clean:docs": "rimraf ./docs",
     "clean:node_modules": "rimraf ./node_modules",
