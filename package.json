@@ -16,7 +16,8 @@
     "start:dev": "ts-node -T src/index.ts",
     "tscov": "tscov",
     "tscov:d": "tscov --details",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
