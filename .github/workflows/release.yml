@@ -30,3 +30,4 @@ jobs:
       with:
         entrypoint: npm
         args: publish
+    needs: [runTests]    
