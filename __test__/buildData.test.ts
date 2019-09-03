@@ -1,49 +1,24 @@
 import { buildData } from '../src/buildData';
 
 describe('buildData', () => {
-  test('without a dirPath', async () => {
-    const expected = [
-      {
-        fileName: '1.jpg',
-        dirName: 'test',
-        fullPath: 'test/1.jpg',
-        'image-uri': 'gs://foo/images/test/1.jpg',
-        productId: 'TEST',
-        displayName: 'Test '
-      },
-      {
-        fileName: '2.png',
-        dirName: 'files',
-        fullPath: 'files/2.png',
-        'image-uri': 'gs://foo/images/files/2.png',
-        productId: 'FILES',
-        displayName: 'Files '
-      }
-    ]
-    const result = await buildData('foo');
-    expect(result).toEqual(expected);
-  })
-
   test('with a dirPath', async () => {
     const expected = [
       {
-        fileName: '1.jpg',
-        dirName: 'someFolder/testing',
-        fullPath: 'someFolder/testing/1.jpg',
-        'image-uri': 'gs://foo/images//testing/1.jpg',
-        productId: 'TESTING',
-        displayName: ' Testing '
+        'image-uri': 'gs://foo/images/testing/1.jpg',
+        'product-id': 'TESTING',
+        'product-display-name': 'Testing ',
+        'product-category': 'packagedgood-v1',
+        'product-set-id': 'test'
       },
       {
-        fileName: '2.png',
-        dirName: 'someFolder/anotherDir',
-        fullPath: 'someFolder/anotherDir/2.png',
-        'image-uri': 'gs://foo/images//anotherDir/2.png',
-        productId: 'ANOTHERDIR',
-        displayName: ' Anotherdir '
+        'image-uri': 'gs://foo/images/another_dir/2.png',
+        'product-id': 'ANOTHERDIR',
+        'product-display-name': 'Another Dir ',
+        'product-category': 'packagedgood-v1',
+        'product-set-id': 'test'
       }
     ]
-    const result = await buildData('foo', 'someFolder');
+    const result = await buildData('foo', './some/folder/', 'packagedgood-v1', 'test');
     expect(result).toEqual(expected);
   })
 })

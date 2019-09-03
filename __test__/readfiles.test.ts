@@ -7,7 +7,7 @@ describe('readfiles', () => {
     expect(result).toContain('test/1.jpg');
   })  
   it('returns results when a path is added', async () => {
-    const result = await readFiles('testDir');
+    const result = await readFiles('testDir/');
     expect(result).toContain('testDir/testing/1.jpg');
   })
 })
