@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-import { writeToFile, CsvData } from '../src/writeToFile';
+import { writeToFile } from '../src/writeToFile';
+import { CsvData } from '../src/interfaces/CsvData';
+
 
 const positiveData: CsvData[] = [
   {
