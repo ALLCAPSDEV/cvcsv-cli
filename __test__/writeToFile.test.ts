@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-import csvToJson from 'csvtojson';
 
-import { writeToFile, CsvData } from '../src/index';
+import { writeToFile } from '../src/writeToFile';
+import { CsvData } from '../src/interfaces/CsvData';
+
 
 const positiveData: CsvData[] = [
   {
@@ -33,8 +34,8 @@ describe('writeToFile', () => {
     const data = fs.readFileSync(filePath, 'utf-8');
     expect(data).toMatch(/gs\:\/\/foo\/bar\.jpg,1,test-set,test product,test category,foobar,\"category='test',category='foo'\",\"100,150,450,150,450,550,100,550\"/)
   })
-  afterEach(async () => {
-    await fs.unlinkSync(filePath)
+  afterEach(() => {
+    fs.unlinkSync(filePath)
   })
 })
 

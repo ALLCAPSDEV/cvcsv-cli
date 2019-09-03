@@ -1,34 +1,22 @@
-import { createObjectCsvWriter } from 'csv-writer';
+import inquirer from 'inquirer';
+import {Logger} from './utils/logger';
+import {bucketQuestion, directoryQuestion, productCategoryQuestion, productSetQuestion} from './questions';
+import clear from 'clear';
+import {buildData} from './buildData';
+import {writeToFile} from './writeToFile';
 
-export interface CsvData {
-  'image-uri': string;
-  'image-id'?: string;
-  'product-set-id': string;
-  'product-id': string;
-  'product-category': string;
-  'product-display-name'?: string;
-  labels?: string;
-  'bounding-poly'?: string;
-}
+clear();
+const logger = new Logger;
+logger.showTitleAndBanner();
 
-export const writeToFile = async (data: CsvData[], path: string) => {
-  const writer = createObjectCsvWriter({
-    path,
-    header: [
-      'image-uri', 
-      'image-id',
-      'product-set-id',
-      'product-id',
-      'product-category',
-      'product-display-name',
-      'labels',
-      'bounding-poly',
-    ]
-  })
-  try {
-    await writer.writeRecords(data);
-    return true;
-  } catch (err) {
-    throw new Error(err)
-  }
-} 
+inquirer.prompt([
+  directoryQuestion,
+  bucketQuestion,
+  productCategoryQuestion,
+  productSetQuestion,
+]).then(async (answers) => {
+  const directory: string = answers.directory.match(/\/$/) ? answers.directory : `${answers.directory}/`;
+  const data = await buildData(answers.bucket, directory, answers.productCategory, answers.productSet);
+  const file = await writeToFile(data, `${directory}imgTest.csv`);
+  if (file) logger.success();
+})
