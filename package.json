@@ -1,5 +1,5 @@
 {
-  "name": "cvcsv-cli",
+  "name": "@matt-riley/cvcsv-cli",
   "version": "0.0.1",
   "description": "",
   "main": "./lib/index.js",
@@ -17,7 +17,7 @@
     "tscov": "tscov",
     "tscov:d": "tscov --details",
     "test": "jest",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",

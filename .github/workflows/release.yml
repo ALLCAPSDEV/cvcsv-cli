@@ -1,0 +1,32 @@
+name: publish
+on:
+  push:
+    branches:
+      - 'master'
+      - 'release-*'
+jobs:
+  runTests:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Run Tests
+      uses: actions/npm@master
+      with:
+        entrypoint: npm
+        args: cit
+  publish:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Install Deps
+      uses: actions/npm@master
+      with:
+        entrypoint: npm
+        args: cit
+    - name: Release
+      uses: actions/npm@master
+      with:
+        entrypoint: npm
+        args: publish
