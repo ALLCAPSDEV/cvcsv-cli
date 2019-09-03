@@ -9,4 +9,10 @@ export class Logger {
     console.log(blue(ConsoleMessage.BANNER));
     console.log('\n')
   }
+
+  public success(): void {
+    console.log(bold().blue(figlet.textSync(ConsoleMessage.DONE, {
+      font: "Graffiti"
+    })));
+  }
 }
