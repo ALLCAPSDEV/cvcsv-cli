@@ -6,6 +6,10 @@
   "bin": {
     "cvcsv": "./bin/index.js"
   },
+  "files": [
+    "./lib/**/*",
+    "./bin/**/*"
+  ],
   "scripts": {
     "build": "npm run clean:some && tsc -p .",
     "clean:lib": "rimraf ./lib",
