@@ -2,9 +2,11 @@ import path from 'path';
 import { readFiles } from './readFiles';
 import { CsvData } from './interfaces/CsvData';
 import { ProductCategories } from './interfaces/CLI';
+import { Logger } from './utils/logger';
 
-export const buildData = async (bucketName: string, dirPath: string, productCategory: ProductCategories, productSetId: string) => {
+export const buildData = async (bucketName: string, dirPath: string, productCategory: ProductCategories, productSetId: string, logger?: Logger) => {
   const paths = await readFiles(dirPath);
+  if (paths.length < 1 && logger) return logger.error("No suitable images found in the directory you provided");
   const fileData: CsvData[] = [];
   paths.forEach((str) => {
     const fileName = path.basename(str);
