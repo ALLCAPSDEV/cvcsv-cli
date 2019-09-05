@@ -4,6 +4,29 @@ This is a tool to make the process of creating the bulk import CSV file for Goog
 
 [Here](https://cloud.google.com/vision/product-search/docs/csv-format) is the documentation for the formatting the CSV.
 
+## Prerequisites
+
+* Node
+* The data should be organised as follows:
+
+  ```shell
+  .
+  ├── kitkat
+  │   └── chunky
+  │       ├── peanut_butter
+  │       │   ├── 01.jpg
+  │       │   ├── 02.jpg
+  │       ├── plain
+  │       │   ├── 01.jpg
+  │       │   ├── 02.jpg
+  │       ├── salted_caramel
+  │       │   ├── 01.jpg
+  │       │   ├── 02.jpg
+  │       │   ├── 03.jpg
+  │       └── white
+  │           └── 01.png
+  ```
+
 ## How to use
 
 ```shell
@@ -18,10 +41,12 @@ Then once the package has been installed:
 cvcsv
 ```
 
+The CLI will then ask a few questions relating to the data, i.e. where it is, the GCP bucket name, etc.
+
 [![asciicast](https://asciinema.org/a/C1UMJ3oVm55niZL49qaWGXqQm.svg)](https://asciinema.org/a/C1UMJ3oVm55niZL49qaWGXqQm)
 
 ## FAQ
 
 *Why isn't this just publised to NPM like everything else?*
 
-Well for a start there is [this](https://www.theregister.co.uk/2019/04/22/npm_fired_staff_union_complaints/) and [this](https://www.theregister.co.uk/2019/04/01/npm_layoff_staff/) to begin with.
+Well for a start there is [this](https://www.theregister.co.uk/2019/04/22/npm_fired_staff_union_complaints/) and [this](https://www.theregister.co.uk/2019/04/01/npm_layoff_staff/).
