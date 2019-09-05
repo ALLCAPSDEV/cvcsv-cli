@@ -1,6 +1,6 @@
 # cvcsv-cli
 
-This is a tool to make the process of creating the bulk import CSV file for Google Clouds Vision API product search a little easier.
+This is a tool to make the process of creating the bulk import CSV file for [Google Clouds Vision Product Search API](https://cloud.google.com/vision/product-search/docs/) a little easier.
 
 [Here](https://cloud.google.com/vision/product-search/docs/csv-format) is the documentation for the formatting the CSV.
 
@@ -43,7 +43,15 @@ cvcsv
 
 The CLI will then ask a few questions relating to the data, i.e. where it is, the GCP bucket name, etc.
 
+The output file will be created in the directory that you provide as the source of the images you wish to add to the csv.
+
 [![asciicast](https://asciinema.org/a/C1UMJ3oVm55niZL49qaWGXqQm.svg)](https://asciinema.org/a/C1UMJ3oVm55niZL49qaWGXqQm)
+
+## TODO
+
+* Provide the choice of where to output the csv file.
+* Improve the tests.
+* Add to my personal Homebrew tap to make updates/upgrades easier to manage.
 
 ## FAQ
 
