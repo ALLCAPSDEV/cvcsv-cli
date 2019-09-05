@@ -5,15 +5,17 @@ describe('buildData', () => {
     const expected = [
       {
         'image-uri': 'gs://foo/images/testing/1.jpg',
+        'labels': 'tag=testing',
         'product-id': 'TESTING',
-        'product-display-name': 'Testing ',
+        'product-display-name': 'Testing',
         'product-category': 'packagedgood-v1',
         'product-set-id': 'test'
       },
       {
         'image-uri': 'gs://foo/images/another_dir/2.png',
+        'labels': 'tag=another_dir',
         'product-id': 'ANOTHERDIR',
-        'product-display-name': 'Another Dir ',
+        'product-display-name': 'Another Dir',
         'product-category': 'packagedgood-v1',
         'product-set-id': 'test'
       }

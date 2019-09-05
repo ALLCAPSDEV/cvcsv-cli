@@ -1,5 +1,3 @@
-import { Answers } from "inquirer";
-
 export interface Choice {
   name: string;
   value: ProductCategoryChoiceValue
