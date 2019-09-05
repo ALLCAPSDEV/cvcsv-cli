@@ -11,15 +11,17 @@ export const buildData = async (bucketName: string, dirPath: string, productCate
     const gsPath = str.replace(dirPath, '');
     const displayName = gsPath.replace(/\/|_/g, ' ').replace(fileName, '').replace(/\w+/g, word => {
       return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    });
+    }).trim();
     const productId = displayName.replace(/\s/g, '').toUpperCase();
     const bucketUri = `gs://${bucketName}/images/${gsPath}`;
+    const labels = gsPath.replace(fileName, '').split(/\//).filter(word => word !== '').map(word => `tag=${word}`).toString(); 
     fileData.push({
       "image-uri": bucketUri,
       "product-id": productId,
       "product-display-name": displayName,
       "product-category": productCategory,
       "product-set-id": productSetId,
+      labels
     });
   });
   return fileData;
