@@ -1,4 +1,5 @@
 import globby from 'globby';
+import { Logger } from './utils/logger';
 
 export const readFiles = async (dirPath?: string) => {
   const defaultPath = dirPath ? dirPath : './';

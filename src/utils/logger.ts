@@ -1,6 +1,7 @@
 import {bold, blue} from 'kleur';
 import {ConsoleMessage} from '../interfaces/Console';
 import figlet from 'figlet';
+import { exists } from 'fs';
 
 export class Logger {
 
@@ -14,5 +15,10 @@ export class Logger {
     console.log(bold().blue(figlet.textSync(ConsoleMessage.DONE, {
       font: "Graffiti"
     })));
+  }
+
+  public error(msg: string): void {
+    console.log(bold().red(`${ConsoleMessage.ERROR}${msg}`));
+    process.exit(1);
   }
 }
