@@ -1,7 +1,7 @@
-import {Question} from 'inquirer';
+import {InputQuestion} from 'inquirer';
 import {blue} from 'kleur';
 
-const bucketQuestion: Question = {
+const bucketQuestion: InputQuestion = {
   name: 'bucket',
   type: 'input',
   message: `${blue("Enter the name of the Storage Bucket where the images are stored: ")}`,

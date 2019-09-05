@@ -9,7 +9,11 @@ export class Logger {
     console.log('\n')
   }
 
-  public success(): void {
+  public success(files: number): void {
+    const plural = files > 1 ? 'files' : 'file';
+    console.log('\n')
+    console.log(bold().bgWhite().blue(`Added ${files} ${plural} to your CSV file.`))
+    console.log('\n')
     console.log(bold().blue(figlet.textSync(ConsoleMessage.DONE, {
       font: "Graffiti"
     })));
