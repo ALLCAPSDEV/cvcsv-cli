@@ -2,7 +2,7 @@ import inquirer, {InputQuestion} from 'inquirer';
 import {blue} from 'kleur';
 import fs from 'fs';
 
-const directoryQuestion: inquirer.Question<InputQuestion> = {
+const directoryQuestion: inquirer.InputQuestion = {
   name: 'directory',
   type: 'input',
   message: `${blue("Enter the root directory: ")}`,
