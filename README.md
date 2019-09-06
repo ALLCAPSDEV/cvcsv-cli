@@ -45,11 +45,11 @@ The CLI will then ask a few questions relating to the data, i.e. where it is, th
 
 The output file will be created in the directory that you provide as the source of the images you wish to add to the csv.
 
-[![asciicast](https://asciinema.org/a/C1UMJ3oVm55niZL49qaWGXqQm.svg)](https://asciinema.org/a/C1UMJ3oVm55niZL49qaWGXqQm)
+[![asciicast](https://asciinema.org/a/CF38ujjDZmvxUwmsWVM9DZ75E.svg)](https://asciinema.org/a/CF38ujjDZmvxUwmsWVM9DZ75E)
 
 ## TODO
 
-* Provide the choice of where to output the csv file.
+* ~Provide the choice of where to output the csv file.~ **DONE**
 * Improve the tests.
 * Add to my personal Homebrew tap to make updates/upgrades easier to manage.
 
