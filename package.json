@@ -21,6 +21,7 @@
     "tscov": "tscov",
     "tscov:d": "tscov --details",
     "test": "jest",
+    "typedoc": "typedoc --out docs ./src",
     "prepare": "npm run build"
   },
   "repository": {
@@ -46,7 +47,7 @@
     "rimraf": "3.0.0",
     "ts-jest": "24.0.2",
     "ts-node": "8.3.0",
-    "tsdoc": "0.0.4",
+    "typedoc": "0.15.0",
     "typescript": "3.6.2"
   },
   "dependencies": {
