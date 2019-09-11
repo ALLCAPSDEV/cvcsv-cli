@@ -48,7 +48,7 @@
     "ts-jest": "24.0.2",
     "ts-node": "8.3.0",
     "typedoc": "0.15.0",
-    "typescript": "3.6.2"
+    "typescript": "3.6.3"
   },
   "dependencies": {
     "clear": "0.1.0",
