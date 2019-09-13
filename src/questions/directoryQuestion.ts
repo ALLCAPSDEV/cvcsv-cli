@@ -1,4 +1,4 @@
-import inquirer, {InputQuestion} from 'inquirer';
+import inquirer from 'inquirer';
 import {blue} from 'kleur';
 import fs from 'fs';
 

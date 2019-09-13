@@ -1,3 +1,5 @@
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/matt-riley/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/matt-riley/cvcsv-cli/context:javascript)
+
 # cvcsv-cli
 
 This is a tool to make the process of creating the bulk import CSV file for [Google Clouds Vision Product Search API](https://cloud.google.com/vision/product-search/docs/) a little easier.
