@@ -1,4 +1,4 @@
-import {bold, blue} from 'kleur';
+import {bold, blue, green} from 'kleur';
 import {ConsoleMessage} from '../interfaces/Console';
 import figlet from 'figlet';
 
@@ -22,5 +22,9 @@ export class Logger {
   public error(msg: string): void {
     console.log(bold().red(`${ConsoleMessage.ERROR}${msg}`));
     process.exit(1);
+  }
+
+  public msg(msg: string): void {
+    console.log(green(`${msg}`));
   }
 }
