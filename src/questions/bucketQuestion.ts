@@ -1,11 +1,13 @@
-import {InputQuestion} from 'inquirer';
-import {blue} from 'kleur';
+import { InputQuestion } from "inquirer";
+import { blue } from "kleur";
 
 const bucketQuestion: InputQuestion = {
-  name: 'bucket',
-  type: 'input',
-  message: `${blue("Enter the name of the Storage Bucket where the images are stored: ")}`,
-  default: 'some-google-cloud-storage-bucket',
-}
+  name: "bucketName",
+  type: "input",
+  message: `${blue(
+    "Enter the name of the Storage Bucket where the images are stored: "
+  )}`,
+  default: "gcp-storage-bucket"
+};
 
 export default bucketQuestion;
