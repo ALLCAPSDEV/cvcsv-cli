@@ -23,7 +23,6 @@ export class CVCSVCLI {
 
   private static async getConfig() {
     const configFile = await Config.readFile();
-    console.log(configFile);
     let config;
     if (configFile === null) {
       config = await inquirer.prompt(fullQuestions);
@@ -39,6 +38,13 @@ export class CVCSVCLI {
     return dir.match(/\/$/) ? dir : `${dir}/`;
   }
 
+  private static formatRootDir(rootDirectory: string) {
+    if (rootDirectory.match(/^\.\//)) {
+      return rootDirectory.replace("./", "");
+    }
+    return rootDirectory
+  }
+
   private static async buildData() {
     const {
       bucketName,
@@ -51,7 +57,7 @@ export class CVCSVCLI {
     const fileData: CsvData[] = [];
     paths.forEach(str => {
       const fileName = path.basename(str);
-      const gsPath = str.replace(rootDirectory, "");
+      const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
       const displayName = gsPath
         .replace(/\/|_/g, " ")
         .replace(fileName, "")
