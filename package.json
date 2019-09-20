@@ -52,7 +52,6 @@
     "typescript": "3.6.3"
   },
   "dependencies": {
-    "commander": "3.0.1",
     "csv-writer": "1.5.0",
     "figlet": "1.2.4",
     "globby": "10.0.1",
