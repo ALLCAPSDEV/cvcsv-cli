@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.js",
+  "private": false,
   "bin": {
     "cvcsv": "./bin/index.js"
   },
