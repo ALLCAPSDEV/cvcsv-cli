@@ -30,7 +30,7 @@
     "type": "git",
     "url": "git+https://github.com/matt-riley/cvcsv-cli.git"
   },
-  "keywords": [],
+  "keywords": ["Google Cloud Vision Product Search", "CSV", "CLI", "bulk import"],
   "author": "",
   "license": "MIT",
   "bugs": {
