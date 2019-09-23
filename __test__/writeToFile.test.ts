@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
+import {CVCSVCLI} from '../src/cvcsvcli';
 
-import { writeToFile } from '../src/writeToFile';
 import { CsvData } from '../src/interfaces/CsvData';
 
 
@@ -22,8 +22,17 @@ const filePath = path.join(__dirname, 'test.csv');
 
 describe('writeToFile', () => {
   let result: boolean;
+  let subject: CVCSVCLI;
+  beforeAll(() => {
+    subject = CVCSVCLI;
+    subject['config'] = {
+      csvFileLocation: '__test__',
+      csvFilename: 'test.csv'
+    }
+    subject['data'] = positiveData;
+  })
   beforeEach(async () => {
-    result = await writeToFile(positiveData, filePath);
+    result = await subject['writeToFile']();
   });
 
   it('returns true when passed valid input', async () => {
