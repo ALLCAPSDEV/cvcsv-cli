@@ -49,14 +49,35 @@ The output file will be created in the directory that you provide as the source 
 
 [![asciicast](https://asciinema.org/a/CF38ujjDZmvxUwmsWVM9DZ75E.svg)](https://asciinema.org/a/CF38ujjDZmvxUwmsWVM9DZ75E)
 
+## Config File
+
+The CLI will read a config file from within the directory that it is executed.
+
+The file should be named `.cvcsvrc` and the structure is as follows:
+
+```json
+{
+  "bucketName": "the-name-of-the-gs-bucket-the-sample-images-are-stored",
+  "csvFileLocation": "where-you-would-like-to-save-the-csv-file",
+  "csvFilename": "the-name-of-the-file.csv",
+  "productCategory": "any-of-the-product-categories-GCP-CV-has",
+  "productSet": "the-name-of-your-product-set",
+  "rootDirectory": "the-root-directory-of-your-images"
+}
+```
+
+You can complete the whole file or you can miss any of the fields out, the CLI will ask you for any that are missing.
+
+If not file is there then you will get the full set of questions.
+
 ## TODO
 
-* ~Provide the choice of where to output the csv file.~ **DONE**
 * Improve the tests.
 * Add to my personal Homebrew tap to make updates/upgrades easier to manage.
+* Confirmation screen.
 
 ## FAQ
 
-*Why isn't this just publised to NPM like everything else?*
+*Why isn't this just published to NPM like everything else?*
 
 Well for a start there is [this](https://www.theregister.co.uk/2019/04/22/npm_fired_staff_union_complaints/) and [this](https://www.theregister.co.uk/2019/04/01/npm_layoff_staff/).
