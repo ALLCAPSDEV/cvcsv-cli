@@ -1,6 +1,17 @@
-import { buildData } from '../src/buildData';
+import {CVCSVCLI} from '../src/cvcsvcli';
 
 describe('buildData', () => {
+  let subject: CVCSVCLI;
+
+  beforeAll(() => {
+    subject = CVCSVCLI;
+    subject['config'] = {
+      bucketName: "foo",
+      rootDirectory: "foo",
+      productCategory: 'packagedgoods-v1',
+      productSet: "test",
+    }
+  })
   test('with a dirPath', async () => {
     const expected = [
       {
@@ -8,7 +19,7 @@ describe('buildData', () => {
         'labels': 'tag=testing',
         'product-id': 'TESTING',
         'product-display-name': 'Testing',
-        'product-category': 'packagedgood-v1',
+        'product-category': 'packagedgoods-v1',
         'product-set-id': 'test'
       },
       {
@@ -16,11 +27,11 @@ describe('buildData', () => {
         'labels': 'tag=another_dir',
         'product-id': 'ANOTHERDIR',
         'product-display-name': 'Another Dir',
-        'product-category': 'packagedgood-v1',
+        'product-category': 'packagedgoods-v1',
         'product-set-id': 'test'
       }
     ]
-    const result = await buildData('foo', './some/folder/', 'packagedgood-v1', 'test');
+    const result = await subject['buildData']();
     expect(result).toEqual(expected);
   })
 })
