@@ -1,6 +1,6 @@
 {
   "name": "@matt-riley/cvcsv-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for creating CSV for Cloud Vision Product Search API",
   "main": "./lib/index.js",
   "private": false,
