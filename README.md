@@ -35,7 +35,7 @@ This is a tool to make the process of creating the bulk import CSV file for [Goo
 npm i -g @matt-riley/cvcsv-cli
 ```
 
-Note: The package is published to [Github Package Registry](https://github.com/features/package-registry) follow [these](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry#installing-a-package) instructions in order to be able to install this package and others from there.
+Note: The package is published to [Github Package Registry](https://github.com/features/package-registry) follow [these](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry#installing-a-package) instructions in order to be able to install this package and others from there. (It is also available via NPMJS)
 
 Then once the package has been installed:
 
@@ -76,8 +76,3 @@ If not file is there then you will get the full set of questions.
 * Add to my personal Homebrew tap to make updates/upgrades easier to manage.
 * Confirmation screen.
 
-## FAQ
-
-*Why isn't this just published to NPM like everything else?*
-
-Well for a start there is [this](https://www.theregister.co.uk/2019/04/22/npm_fired_staff_union_complaints/) and [this](https://www.theregister.co.uk/2019/04/01/npm_layoff_staff/).
