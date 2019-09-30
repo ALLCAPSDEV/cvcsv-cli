@@ -10,4 +10,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: ClearlyNoticed Action
       uses: dabutvin/chive-action@1.1.0
-
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
