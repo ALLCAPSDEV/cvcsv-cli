@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+    - develop
+jobs:
+  noticeFile:
+    name: Create Notice File
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: ClearlyNoticed Action
+      uses: dabutvin/chive-action@1.1.0
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
