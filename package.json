@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/matt-riley/cvcsv-cli#readme",
   "devDependencies": {
-    "@liftr/tscov": "1.4.1",
+    "@liftr/tscov": "1.4.3",
     "@types/figlet": "1.2.0",
     "@types/inquirer": "6.5.0",
     "@types/jest": "24.0.18",
