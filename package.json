@@ -50,7 +50,7 @@
     "ts-jest": "24.1.0",
     "ts-node": "8.4.1",
     "typedoc": "0.15.0",
-    "typescript": "3.6.3"
+    "typescript": "3.6.4"
   },
   "dependencies": {
     "csv-writer": "1.5.0",
