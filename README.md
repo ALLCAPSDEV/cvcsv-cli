@@ -68,7 +68,7 @@ The file should be named `.cvcsvrc` and the structure is as follows:
 
 You can complete the whole file or you can miss any of the fields out, the CLI will ask you for any that are missing.
 
-If not file is there then you will get the full set of questions.
+If no file is there then you will get the full set of questions.
 
 ## TODO
 
