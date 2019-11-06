@@ -1,4 +1,4 @@
-import fs from "fs";
+import * as fs from "fs";
 import path from "path";
 import inquirer from "inquirer";
 import {
@@ -24,13 +24,13 @@ export class Config {
   private static configQuestions: {
     [index: string]: any;
   } = {
-    bucketName: bucketQuestion,
-    csvFileLocation: fileLocationQuestion,
-    csvFilename: filenameQuestion,
-    productCategory: productCategoryQuestion,
-    productSet: productSetQuestion,
-    rootDirectory: directoryQuestion
-  };
+      bucketName: bucketQuestion,
+      csvFileLocation: fileLocationQuestion,
+      csvFilename: filenameQuestion,
+      productCategory: productCategoryQuestion,
+      productSet: productSetQuestion,
+      rootDirectory: directoryQuestion
+    };
 
   public static async readFile() {
     const fileName = ".cvcsvrc";
@@ -56,7 +56,7 @@ export class Config {
     if (missing.length === 0) {
       return await Promise.resolve(objToCheck);
     }
-    const ans = await inquirer.prompt(missing);
+    const ans: Object = await inquirer.prompt(missing);
     return { ...ans, ...objToCheck };
   }
 }
