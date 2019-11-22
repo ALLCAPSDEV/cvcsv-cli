@@ -1,11 +1,11 @@
-import { InputQuestion } from "inquirer";
-import { blue } from "kleur";
+import { blue } from 'kleur';
+import { PromptObject } from 'prompts';
 
-const filenameQuestion: InputQuestion = {
-  name: "csvFilename",
-  type: "input",
-  message: `${blue("What would you like the output file to be called?")}`,
-  default: "images.csv"
+const filenameQuestion: PromptObject = {
+  name: 'csvFilename',
+  type: 'text',
+  message: `${blue('What would you like the output file to be called?')}`,
+  initial: 'images.csv',
 };
 
 export default filenameQuestion;
