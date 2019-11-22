@@ -1,43 +1,43 @@
-import * as fs from "fs";
-import path from "path";
-import inquirer from "inquirer";
+import * as fs from 'fs';
+import path from 'path';
 import {
   directoryQuestion,
   filenameQuestion,
   fileLocationQuestion,
   bucketQuestion,
   productCategoryQuestion,
-  productSetQuestion
-} from "../questions";
-import { ConfigObj } from "../interfaces/ConfigObj";
+  productSetQuestion,
+} from '../questions';
+import { ConfigObj } from '../interfaces/ConfigObj';
+import prompts from 'prompts';
 
 export class Config {
   private static configKeys = [
-    "bucketName",
-    "csvFileLocation",
-    "csvFilename",
-    "productCategory",
-    "productSet",
-    "rootDirectory"
+    'bucketName',
+    'csvFileLocation',
+    'csvFilename',
+    'productCategory',
+    'productSet',
+    'rootDirectory',
   ];
 
   private static configQuestions: {
     [index: string]: any;
   } = {
-      bucketName: bucketQuestion,
-      csvFileLocation: fileLocationQuestion,
-      csvFilename: filenameQuestion,
-      productCategory: productCategoryQuestion,
-      productSet: productSetQuestion,
-      rootDirectory: directoryQuestion
-    };
+    bucketName: bucketQuestion,
+    csvFileLocation: fileLocationQuestion,
+    csvFilename: filenameQuestion,
+    productCategory: productCategoryQuestion,
+    productSet: productSetQuestion,
+    rootDirectory: directoryQuestion,
+  };
 
   public static async readFile() {
-    const fileName = ".cvcsvrc";
+    const fileName = '.cvcsvrc';
     const filePath = path.join(process.cwd(), fileName);
     if (fs.existsSync(filePath)) {
       try {
-        const file = fs.readFileSync(filePath, "utf-8");
+        const file = fs.readFileSync(filePath, 'utf-8');
         const json = JSON.parse(file);
         return json;
       } catch (error) {
@@ -56,7 +56,7 @@ export class Config {
     if (missing.length === 0) {
       return await Promise.resolve(objToCheck);
     }
-    const ans: Object = await inquirer.prompt(missing);
+    const ans: Object = await prompts(missing);
     return { ...ans, ...objToCheck };
   }
 }
