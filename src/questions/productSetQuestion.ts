@@ -1,11 +1,11 @@
-import { Question } from "inquirer";
-import { blue } from "kleur";
+import { blue } from 'kleur';
+import { PromptObject } from 'prompts';
 
-const productSetQuestion: Question = {
-  name: "productSet",
-  type: "input",
-  message: `${blue("Enter the product set id: ")}`,
-  default: "test-product-set"
+const productSetQuestion: PromptObject = {
+  name: 'productSet',
+  type: 'text',
+  message: `${blue('Enter the product set id: ')}`,
+  initial: 'test-product-set',
 };
 
 export default productSetQuestion;
