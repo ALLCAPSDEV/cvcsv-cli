@@ -1,13 +1,13 @@
-import { InputQuestion } from "inquirer";
-import { blue } from "kleur";
+import { blue } from 'kleur';
+import { PromptObject } from 'prompts';
 
-const bucketQuestion: InputQuestion = {
-  name: "bucketName",
-  type: "input",
+const bucketQuestion: PromptObject = {
+  name: 'bucketName',
+  type: 'text',
   message: `${blue(
-    "Enter the name of the Storage Bucket where the images are stored: "
+    'Enter the name of the Storage Bucket where the images are stored: ',
   )}`,
-  default: "gcp-storage-bucket"
+  initial: 'gcp-storage-bucket',
 };
 
 export default bucketQuestion;
