@@ -22,5 +22,5 @@ jobs:
     - name: Install Deps if no cache
       if: steps.npm-cache.outputs.cache-hit != 'true'
       run: npm ci
-    - name: Execute test
+    - name: Execute tests
       run: npm run test
