@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: 05 17 * * *
+    - cron: '10 17 * * *'
 name: auto bump
 jobs:
   tests:
