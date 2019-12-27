@@ -44,7 +44,7 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Create Github release
-        run: npm run gh-releaser
+        run: CONVENTIONAL_GITHUB_RELEASER_TOKEN=${{ secrets.GITHUB_TOKEN }} npm run gh-releaser
 
   publish-npm:
     needs: test
