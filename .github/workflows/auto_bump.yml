@@ -1,7 +1,7 @@
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '30 17 * * 5'
+    - cron:  '20 18 * * 1-5'
 name: auto bump
 jobs:
   tests:
@@ -38,7 +38,7 @@ jobs:
         with:
           ref: master
       - name: merge develop into master
-        run: git merge develop
+        run: git merge origin/develop
       - name: npm cache
         id: npm-cache
         uses: actions/cache@v1
