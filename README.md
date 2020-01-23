@@ -1,4 +1,4 @@
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/matt-riley/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/matt-riley/cvcsv-cli/context:javascript)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/matt-riley/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/matt-riley/cvcsv-cli/context:javascript) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 # cvcsv-cli
 
@@ -8,8 +8,8 @@ This is a tool to make the process of creating the bulk import CSV file for [Goo
 
 ## Prerequisites
 
-* Node
-* The data should be organised as follows:
+- Node
+- The data should be organised as follows:
 
   ```shell
   .
@@ -72,7 +72,6 @@ If no file is there then you will get the full set of questions.
 
 ## TODO
 
-* Improve the tests.
-* Add to my personal Homebrew tap to make updates/upgrades easier to manage.
-* Confirmation screen.
-
+- Improve the tests.
+- Add to my personal Homebrew tap to make updates/upgrades easier to manage.
+- Confirmation screen.
