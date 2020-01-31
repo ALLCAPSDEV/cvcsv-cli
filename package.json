@@ -19,7 +19,7 @@
     "clean:some": "run-p clean:lib clean:docs",
     "clean": "run-p prettier clean:lib clean:docs clean:node_modules",
     "gh-releaser": "conventional-github-releaser",
-    "release": "standard-version",
+    "release": "standard-version -s",
     "start:dev": "ts-node -T src/index.ts",
     "tscov": "tscov",
     "tscov:d": "tscov --details",
@@ -73,6 +73,11 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "tag": true
     }
   }
 }
