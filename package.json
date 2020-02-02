@@ -48,7 +48,7 @@
     "@liftr/tscov": "1.4.4",
     "@types/figlet": "1.2.0",
     "@types/jest": "25.1.1",
-    "@types/node": "13.5.3",
+    "@types/node": "13.7.0",
     "@types/prompts": "2.0.3",
     "commitizen": "4.0.3",
     "conventional-github-releaser": "3.1.3",
