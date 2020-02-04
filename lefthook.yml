@@ -1,0 +1,4 @@
+commit-msg:
+  commands:
+    commitLint:
+      run: npm run commitlint
