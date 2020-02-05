@@ -4,5 +4,5 @@ commit-msg:
       run: npm run commitlint
 pre-commit:
   commands:
-    prettyQuick:
-      run: npm run pretty-quick -- --staged
+    pretty-quick:
+      run: npm run pretty-quick --staged
