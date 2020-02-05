@@ -24,5 +24,3 @@ jobs:
         run: npm ci
       - name: Execute tests
         run: npm run test
-      - name: Check Code Style
-        run: npm run pretty-quick -- --check
