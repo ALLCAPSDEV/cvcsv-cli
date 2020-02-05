@@ -75,3 +75,8 @@ If no file is there then you will get the full set of questions.
 - Improve the tests.
 - Add to my personal Homebrew tap to make updates/upgrades easier to manage.
 - Confirmation screen.
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/matt-riley/cvcsv-cli/badge.svg?style=beer-square)](https://beerpay.io/matt-riley/cvcsv-cli)  [![Beerpay](https://beerpay.io/matt-riley/cvcsv-cli/make-wish.svg?style=flat-square)](https://beerpay.io/matt-riley/cvcsv-cli?focus=wish)
