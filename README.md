@@ -1,6 +1,6 @@
 # cvcsv-cli
 
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/matt-riley/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/matt-riley/cvcsv-cli/context:javascript) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm](https://img.shields.io/npm/dm/@matt-riley/cvcsv-cli)](https://www.npmjs.com/package/@matt-riley/cvcsv-cli)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/matt-riley/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/matt-riley/cvcsv-cli/context:javascript) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm](https://img.shields.io/npm/dm/@matt-riley/cvcsv-cli)](https://www.npmjs.com/package/@matt-riley/cvcsv-cli) [![Beerpay](https://beerpay.io/matt-riley/cvcsv-cli/badge.svg?style=flat-square)](https://beerpay.io/matt-riley/cvcsv-cli)
 
 This is a tool to make the process of creating the bulk import CSV file for [Google Clouds Vision Product Search API](https://cloud.google.com/vision/product-search/docs/) a little easier.
 
