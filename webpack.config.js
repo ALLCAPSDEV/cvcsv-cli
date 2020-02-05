@@ -1,5 +1,6 @@
 const nodeExternals = require("webpack-node-externals");
 const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -8,6 +9,11 @@ module.exports = {
   externals: [nodeExternals()],
   optimization: {
     minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        parallel: true
+      })
+    ],
     moduleIds: "size",
     usedExports: true
   },
