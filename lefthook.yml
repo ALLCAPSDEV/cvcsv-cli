@@ -2,3 +2,7 @@ commit-msg:
   commands:
     commitLint:
       run: npm run commitlint
+pre-commit:
+  commands:
+    prettyQuick:
+      run: npm run pretty-quick -- --staged
