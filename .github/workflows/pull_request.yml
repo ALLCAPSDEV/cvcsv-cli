@@ -8,19 +8,19 @@ jobs:
       matrix:
         node_version: [8, 10, 11, 12, 13]
     steps:
-    - uses: actions/checkout@v1
-    - name: npm cache
-      id: npm-cache
-      uses: actions/cache@v1
-      with: 
-        path: node_modules
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-    - name: Use Node.js ${{ matrix.node_version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node_version }}
-    - name: Install Deps if no cache
-      if: steps.npm-cache.outputs.cache-hit != 'true'
-      run: npm ci
-    - name: Execute tests
-      run: npm run test
+      - uses: actions/checkout@v1
+      - name: npm cache
+        id: npm-cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node_version }}
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: Execute tests
+        run: npm run test

@@ -29,22 +29,6 @@ jobs:
         run: npm ci
       - name: Execute tests
         run: npm run test
-  github-release:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: npm cache
-        id: npm-cache
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      - name: Install Deps if no cache
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm ci
-      - name: Create Github release
-        run: CONVENTIONAL_GITHUB_RELEASER_TOKEN=${{ secrets.GITHUB_TOKEN }} npm run gh-releaser
 
   publish-npm:
     needs: test
@@ -69,7 +53,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@matt-riley'
+          scope: "@matt-riley"
       - run: npm ci
       - run: npm publish
         env:
