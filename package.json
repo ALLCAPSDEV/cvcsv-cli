@@ -1,6 +1,6 @@
 {
-  "name": "@matt-riley/cvcsv-cli",
-  "version": "1.1.6",
+  "name": "@allcapsdev/cvcsv-cli",
+  "version": "1.1.7",
   "description": "CLI for creating CSV for Cloud Vision Product Search API",
   "main": "./lib/index.js",
   "private": false,
@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matt-riley/cvcsv-cli.git"
+    "url": "git+https://github.com/allcapsdev/cvcsv-cli.git"
   },
   "keywords": [
     "Google Cloud Vision Product Search",
@@ -45,9 +45,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matt-riley/cvcsv-cli/issues"
+    "url": "https://github.com/allcapsdev/cvcsv-cli/issues"
   },
-  "homepage": "https://github.com/matt-riley/cvcsv-cli#readme",
+  "homepage": "https://github.com/allcapsdev/cvcsv-cli#readme",
   "devDependencies": {
     "@arkweid/lefthook": "0.7.1",
     "@babel/core": "^7.2.2",
@@ -58,7 +58,7 @@
     "@size-limit/preset-small-lib": "^4.0.0",
     "@types/figlet": "1.2.0",
     "@types/jest": "25.1.2",
-    "@types/node": "13.7.0",
+    "@types/node": "13.7.1",
     "@types/prompts": "2.0.3",
     "babel-loader": "^8.0.5",
     "commitizen": "4.0.3",
