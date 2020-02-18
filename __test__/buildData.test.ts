@@ -1,5 +1,4 @@
 import { CVCSVCLI } from "../src/cvcsvcli";
-import * as readline from "readline";
 describe("buildData", () => {
   let subject: CVCSVCLI;
   let mockStdoutClearLine: jest.SpyInstance<
@@ -25,10 +24,6 @@ describe("buildData", () => {
       productCategory: "packagedgoods-v1",
       productSet: "test"
     };
-  });
-  afterAll(() => {
-    mockStdoutClearLine.mockRestore();
-    mockStdoutWrite.mockRestore();
   });
   test("with a dirPath", async () => {
     const expected = [
