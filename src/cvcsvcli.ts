@@ -4,6 +4,7 @@ import { Logger } from "./utils/logger";
 import path from "path";
 import { createObjectCsvWriter } from "csv-writer";
 import { readFiles } from "./utils/readFiles";
+import { getBoundingPoly } from "./utils/getBoundingPoly";
 import { CsvData } from "./interfaces/CsvData";
 
 export class CVCSVCLI {
@@ -54,6 +55,8 @@ export class CVCSVCLI {
     if (paths.length < 1) throw Error("No images");
     const fileData: CsvData[] = [];
     paths.forEach(str => {
+      const boundingPoly = getBoundingPoly(str);
+      console.log(boundingPoly);
       const fileName = path.basename(str);
       const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
       const displayName = gsPath

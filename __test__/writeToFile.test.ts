@@ -47,5 +47,4 @@ describe("writeToFile", () => {
   afterEach(() => {
     fs.unlinkSync(filePath);
   });
-  afterAll(() => {});
 });
