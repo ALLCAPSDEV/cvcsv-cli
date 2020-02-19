@@ -6,6 +6,8 @@ import { createObjectCsvWriter } from "csv-writer";
 import { readFiles } from "./utils/readFiles";
 import { getBoundingPoly } from "./utils/getBoundingPoly";
 import { CsvData } from "./interfaces/CsvData";
+import { ConfigObj } from "./interfaces/ConfigObj";
+import { ProgressBar } from "./utils/progressBar";
 
 export class CVCSVCLI {
   private static config: any;
@@ -22,7 +24,7 @@ export class CVCSVCLI {
 
   private static async getConfig() {
     const configFile = await Config.readFile();
-    let config;
+    let config: prompts.Answers<string> | ConfigObj;
     if (configFile === null) {
       config = await prompts(Object.values(Config.configQuestions));
     } else {
@@ -53,10 +55,10 @@ export class CVCSVCLI {
     } = this.config;
     const paths = await readFiles(rootDirectory);
     if (paths.length < 1) throw Error("No images");
+    const pgb = new ProgressBar();
+    pgb.start(paths.length);
     const fileData: CsvData[] = [];
-    paths.forEach(str => {
-      const boundingPoly = getBoundingPoly(str);
-      console.log(boundingPoly);
+    paths.forEach((str, idx) => {
       const fileName = path.basename(str);
       const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
       const displayName = gsPath
@@ -83,6 +85,7 @@ export class CVCSVCLI {
         "product-set-id": productSet,
         labels
       });
+      pgb.update(idx + 1);
     });
 
     return fileData;

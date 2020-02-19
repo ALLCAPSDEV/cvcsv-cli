@@ -1,9 +1,10 @@
 import { CVCSVCLI } from "../src/cvcsvcli";
+import { spyOnImplementing } from "jest-mock-process";
 describe("buildData", () => {
   let subject: CVCSVCLI;
   let mockStdoutClearLine: jest.SpyInstance<
     boolean,
-    [NodeJS.WritableStream, readline.Direction, (() => void)?]
+    [import("tty").Direction, (() => void)?]
   >;
   let mockStdoutWrite: jest.SpyInstance<
     boolean,
@@ -11,12 +12,12 @@ describe("buildData", () => {
   >;
 
   beforeAll(() => {
-    mockStdoutClearLine = jest
-      .spyOn(readline, "clearLine")
-      .mockImplementation(() => true);
-    mockStdoutWrite = jest
-      .spyOn(process.stdout, "write")
-      .mockImplementation(() => true);
+    mockStdoutClearLine = spyOnImplementing(
+      process.stdout,
+      "clearLine",
+      () => true
+    );
+    mockStdoutWrite = spyOnImplementing(process.stdout, "write", () => true);
     subject = CVCSVCLI;
     subject["config"] = {
       bucketName: "foo",
@@ -24,6 +25,10 @@ describe("buildData", () => {
       productCategory: "packagedgoods-v1",
       productSet: "test"
     };
+  });
+  afterAll(() => {
+    mockStdoutClearLine.mockRestore();
+    mockStdoutWrite.mockRestore();
   });
   test("with a dirPath", async () => {
     const expected = [
