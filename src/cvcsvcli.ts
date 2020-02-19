@@ -51,14 +51,15 @@ export class CVCSVCLI {
       bucketName,
       rootDirectory,
       productCategory,
-      productSet
+      productSet,
+      vertices
     } = this.config;
     const paths = await readFiles(rootDirectory);
     if (paths.length < 1) throw Error("No images");
     const pgb = new ProgressBar();
     pgb.start(paths.length);
     const fileData: CsvData[] = [];
-    paths.forEach((str, idx) => {
+    paths.forEach((str: string, idx: number) => {
       const fileName = path.basename(str);
       const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
       const displayName = gsPath

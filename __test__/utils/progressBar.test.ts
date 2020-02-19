@@ -59,7 +59,7 @@ describe("ProgressBar", () => {
     });
     it("writes to stdout", () => {
       const filledBar = bgBlue("     ");
-      const emptyBar = "*****";
+      const emptyBar = "\u2591\u2591\u2591\u2591\u2591";
       const progressPercent = (0.5 * 100).toFixed(2);
       expect(mockWrite).toBeCalledWith(
         `Current progress: [${filledBar}${emptyBar}] | ${progressPercent}%`

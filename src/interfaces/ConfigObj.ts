@@ -5,4 +5,5 @@ export interface ConfigObj {
   productCategory: string;
   productSet: string;
   rootDirectory: string;
+  vertices: string;
 }

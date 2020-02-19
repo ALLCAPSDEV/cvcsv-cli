@@ -25,7 +25,7 @@ export class ProgressBar {
     const filledLength = parseInt((progress * this.size).toFixed(0));
     const emptyLength = this.size - filledLength;
     const filledBar = this.bar(filledLength, " ", bgBlue);
-    const emptyBar = this.bar(emptyLength, "*");
+    const emptyBar = this.bar(emptyLength, "\u2591");
     const progressPercent = (progress * 100).toFixed(2);
     readline.clearLine(process.stdout, 0);
     readline.cursorTo(process.stdout, 0);
@@ -42,3 +42,8 @@ export class ProgressBar {
     return colour(str);
   }
 }
+
+const thing = new ProgressBar();
+
+thing.start(100);
+thing.update(50);
