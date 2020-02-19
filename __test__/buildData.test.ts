@@ -1,10 +1,10 @@
 import { CVCSVCLI } from "../src/cvcsvcli";
-import { spyOnImplementing } from "jest-mock-process";
+import * as readline from "readline";
 describe("buildData", () => {
   let subject: CVCSVCLI;
   let mockStdoutClearLine: jest.SpyInstance<
     boolean,
-    [import("tty").Direction, (() => void)?]
+    [NodeJS.WritableStream, readline.Direction, (() => void)?]
   >;
   let mockStdoutWrite: jest.SpyInstance<
     boolean,
@@ -12,12 +12,12 @@ describe("buildData", () => {
   >;
 
   beforeAll(() => {
-    mockStdoutClearLine = spyOnImplementing(
-      process.stdout,
-      "clearLine",
-      () => true
-    );
-    mockStdoutWrite = spyOnImplementing(process.stdout, "write", () => true);
+    mockStdoutClearLine = jest
+      .spyOn(readline, "clearLine")
+      .mockImplementation(() => true);
+    mockStdoutWrite = jest
+      .spyOn(process.stdout, "write")
+      .mockImplementation(() => true);
     subject = CVCSVCLI;
     subject["config"] = {
       bucketName: "foo",

@@ -1,5 +1,5 @@
 import { bgBlue } from "kleur";
-
+import * as readline from "readline";
 export class ProgressBar {
   private size: number;
   private current: number = 0;
@@ -27,8 +27,8 @@ export class ProgressBar {
     const filledBar = this.bar(filledLength, " ", bgBlue);
     const emptyBar = this.bar(emptyLength, "*");
     const progressPercent = (progress * 100).toFixed(2);
-    process.stdout.clearLine(0);
-    process.stdout.cursorTo(0);
+    readline.clearLine(process.stdout, 0);
+    readline.cursorTo(process.stdout, 0);
     process.stdout.write(
       `Current progress: [${filledBar}${emptyBar}] | ${progressPercent}%`
     );
