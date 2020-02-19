@@ -42,3 +42,8 @@ export class ProgressBar {
     return colour(str);
   }
 }
+
+const thing = new ProgressBar();
+
+thing.start(100);
+thing.update(50);

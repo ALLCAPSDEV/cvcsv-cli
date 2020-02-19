@@ -1,13 +1,13 @@
-import { Config } from './utils/configFile';
-import prompts from 'prompts';
-import { Logger } from './utils/logger';
-import path from 'path';
-import { createObjectCsvWriter } from 'csv-writer';
-import { readFiles } from './utils/readFiles';
-import { getBoundingPoly } from './utils/getBoundingPoly';
-import { CsvData } from './interfaces/CsvData';
-import { ConfigObj } from './interfaces/ConfigObj';
-import { ProgressBar } from './utils/progressBar';
+import { Config } from "./utils/configFile";
+import prompts from "prompts";
+import { Logger } from "./utils/logger";
+import path from "path";
+import { createObjectCsvWriter } from "csv-writer";
+import { readFiles } from "./utils/readFiles";
+import { getBoundingPoly } from "./utils/getBoundingPoly";
+import { CsvData } from "./interfaces/CsvData";
+import { ConfigObj } from "./interfaces/ConfigObj";
+import { ProgressBar } from "./utils/progressBar";
 
 export class CVCSVCLI {
   private static config: any;
@@ -41,7 +41,7 @@ export class CVCSVCLI {
 
   private static formatRootDir(rootDirectory: string): string {
     if (rootDirectory.match(/^\.\//)) {
-      return rootDirectory.replace('./', '');
+      return rootDirectory.replace("./", "");
     }
     return rootDirectory;
   }
@@ -55,7 +55,7 @@ export class CVCSVCLI {
       vertices
     } = this.config;
     const paths = await readFiles(rootDirectory);
-    if (paths.length < 1) throw Error('No images');
+    if (paths.length < 1) throw Error("No images");
     const pgb = new ProgressBar();
     pgb.start(paths.length);
     const fileData: CsvData[] = [];
@@ -70,29 +70,29 @@ export class CVCSVCLI {
       }
       boundingPoly;
       const fileName = path.basename(str);
-      const gsPath = str.replace(this.formatRootDir(rootDirectory), '');
+      const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
       const displayName = gsPath
-        .replace(/\/|_/g, ' ')
-        .replace(fileName, '')
+        .replace(/\/|_/g, " ")
+        .replace(fileName, "")
         .replace(/\w+/g, word => {
           return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
         })
         .trim();
-      const productId = displayName.replace(/\s/g, '').toUpperCase();
+      const productId = displayName.replace(/\s/g, "").toUpperCase();
       const bucketUri = `gs://${bucketName}/images/${gsPath}`;
       const labels = gsPath
-        .replace(fileName, '')
+        .replace(fileName, "")
         .split(/\//)
-        .filter(word => word !== '')
+        .filter(word => word !== "")
         .map(word => `tag=${word}`)
         .toString();
 
       fileData.push({
-        'image-uri': bucketUri,
-        'product-id': productId,
-        'product-display-name': displayName,
-        'product-category': productCategory,
-        'product-set-id': productSet,
+        "image-uri": bucketUri,
+        "product-id": productId,
+        "product-display-name": displayName,
+        "product-category": productCategory,
+        "product-set-id": productSet,
         labels
       });
       pgb.update(idx + 1);
@@ -109,14 +109,14 @@ export class CVCSVCLI {
     const writer = createObjectCsvWriter({
       path: filePath,
       header: [
-        'image-uri',
-        'image-id',
-        'product-set-id',
-        'product-id',
-        'product-category',
-        'product-display-name',
-        'labels',
-        'bounding-poly'
+        "image-uri",
+        "image-id",
+        "product-set-id",
+        "product-id",
+        "product-category",
+        "product-display-name",
+        "labels",
+        "bounding-poly"
       ]
     });
 
