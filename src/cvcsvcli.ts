@@ -4,10 +4,10 @@ import { Logger } from "./utils/logger";
 import path from "path";
 import { createObjectCsvWriter } from "csv-writer";
 import { readFiles } from "./utils/readFiles";
-import { getBoundingPoly } from "./utils/getBoundingPoly";
 import { CsvData } from "./interfaces/CsvData";
 import { ConfigObj } from "./interfaces/ConfigObj";
 import { ProgressBar } from "./utils/progressBar";
+import { getBoundingPoly } from "./utils/getBoundingPoly";
 
 export class CVCSVCLI {
   private static config: any;

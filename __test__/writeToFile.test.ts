@@ -49,4 +49,5 @@ describe("writeToFile", () => {
     fs.unlinkSync(filePath);
     // boundPolyMock.mockRestore();
   });
+  afterAll(() => {});
 });
