@@ -4,7 +4,7 @@ import { Logger } from "./utils/logger";
 import path from "path";
 import { createObjectCsvWriter } from "csv-writer";
 import { readFiles } from "./utils/readFiles";
-// import { getBoundingPoly } from "./utils/getBoundingPoly";
+import { getBoundingPoly } from "./utils/getBoundingPoly";
 import { CsvData } from "./interfaces/CsvData";
 import { ConfigObj } from "./interfaces/ConfigObj";
 import { ProgressBar } from "./utils/progressBar";
@@ -60,14 +60,15 @@ export class CVCSVCLI {
     pgb.start(paths.length);
     const fileData: CsvData[] = [];
     for (const [idx, str] of paths.entries()) {
-      // let boundingPoly;
-      // if (vertices) {
-      //   try {
-      //     boundingPoly = await getBoundingPoly(str);
-      //   } catch (error) {
-      //     throw error;
-      //   }
-      // }
+      let boundingPoly;
+      if (vertices) {
+        try {
+          boundingPoly = await getBoundingPoly(str);
+        } catch (error) {
+          throw error;
+        }
+      }
+      boundingPoly;
       const fileName = path.basename(str);
       const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
       const displayName = gsPath

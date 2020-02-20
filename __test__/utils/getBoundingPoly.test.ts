@@ -1,6 +1,5 @@
 jest.mock("fs");
 import * as fs from "fs";
-import * as vision from "@google-cloud/vision";
 import { getBoundingPoly } from "../../src/utils/getBoundingPoly";
 
 describe("getBoundingPoly", () => {

@@ -11,7 +11,20 @@ module.exports = {
     minimize: true,
     minimizer: [
       new TerserPlugin({
-        parallel: true
+        parallel: true,
+        extractComments: false,
+        terserOptions: {
+          mangle: true,
+          compress: {
+            passes: 500
+          },
+          toplevel: true,
+          keep_classnames: false,
+          keep_fnames: false,
+          output: {
+            comments: false
+          }
+        }
       })
     ],
     moduleIds: "size",
