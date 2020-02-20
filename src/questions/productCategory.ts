@@ -23,9 +23,10 @@ const listOfProductCategories: Choice[] = [
 
 const productCategoryQuestion: PromptObject = {
   name: "productCategory",
-  type: "list",
+  type: "select",
   message: `${blue("Which product category are these images for?")}`,
-  choices: listOfProductCategories
+  choices: listOfProductCategories,
+  hint: " - Space to select"
 };
 
 export default productCategoryQuestion;

@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { CVCSVCLI } from "../src/cvcsvcli";
+// import * as bp from "../src/utils/getBoundingPoly";
 
 import { CsvData } from "../src/interfaces/CsvData";
 
@@ -46,5 +47,7 @@ describe("writeToFile", () => {
   });
   afterEach(() => {
     fs.unlinkSync(filePath);
+    // boundPolyMock.mockRestore();
   });
+  afterAll(() => {});
 });
