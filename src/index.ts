@@ -1,3 +1,3 @@
-import { CVCSVCLI } from "./cvcsvcli";
+import { CVCSVCLI } from './cvcsvcli';
 
 CVCSVCLI.run();

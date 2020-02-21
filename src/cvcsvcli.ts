@@ -1,20 +1,20 @@
-import { Config } from "./utils/configFile";
-import prompts from "prompts";
-import { Logger } from "./utils/logger";
-import path from "path";
-import { createObjectCsvWriter } from "csv-writer";
-import { readFiles } from "./utils/readFiles";
-import { getBoundingPoly } from "./utils/getBoundingPoly";
-import { CsvData } from "./interfaces/CsvData";
-import { ConfigObj } from "./interfaces/ConfigObj";
-import { ProgressBar } from "./utils/progressBar";
+import { Config } from './utils/configFile';
+import prompts from 'prompts';
+import { Logger } from './utils/logger';
+import path from 'path';
+import { createObjectCsvWriter } from 'csv-writer';
+import { readFiles } from './utils/readFiles';
+import { getBoundingPoly } from './utils/getBoundingPoly';
+import { CsvData } from './interfaces/CsvData';
+import { ConfigObj } from './interfaces/ConfigObj';
+import { ProgressBar } from './utils/progressBar';
 
 export class CVCSVCLI {
   private static config: any;
   private static data: CsvData[];
   private static file: boolean;
 
-  public static async run() {
+  public static async run(): Promise<void> {
     Logger.showTitleAndBanner();
     await this.getConfig();
     this.data = await this.buildData();
@@ -22,7 +22,7 @@ export class CVCSVCLI {
     if (this.file && this.data) Logger.success(this.data.length);
   }
 
-  private static async getConfig() {
+  private static async getConfig(): Promise<void> {
     const configFile: Partial<ConfigObj> = await Config.readFile();
     let config: prompts.Answers<string> | ConfigObj;
     if (configFile === null) {
@@ -35,18 +35,18 @@ export class CVCSVCLI {
     this.config = config;
   }
 
-  private static formatDirectory(dir: string) {
+  private static formatDirectory(dir: string): string {
     return dir.match(/\/$/) ? dir : `${dir}/`;
   }
 
-  private static formatRootDir(rootDirectory: string) {
+  private static formatRootDir(rootDirectory: string): string {
     if (rootDirectory.match(/^\.\//)) {
-      return rootDirectory.replace("./", "");
+      return rootDirectory.replace('./', '');
     }
     return rootDirectory;
   }
 
-  private static async buildData() {
+  private static async buildData(): Promise<CsvData[]> {
     const {
       bucketName,
       rootDirectory,
@@ -55,7 +55,7 @@ export class CVCSVCLI {
       vertices
     } = this.config;
     const paths = await readFiles(rootDirectory);
-    if (paths.length < 1) throw Error("No images");
+    if (paths.length < 1) throw Error('No images');
     const pgb = new ProgressBar();
     pgb.start(paths.length);
     const fileData: CsvData[] = [];
@@ -70,29 +70,29 @@ export class CVCSVCLI {
       }
       boundingPoly;
       const fileName = path.basename(str);
-      const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
+      const gsPath = str.replace(this.formatRootDir(rootDirectory), '');
       const displayName = gsPath
-        .replace(/\/|_/g, " ")
-        .replace(fileName, "")
+        .replace(/\/|_/g, ' ')
+        .replace(fileName, '')
         .replace(/\w+/g, word => {
           return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
         })
         .trim();
-      const productId = displayName.replace(/\s/g, "").toUpperCase();
+      const productId = displayName.replace(/\s/g, '').toUpperCase();
       const bucketUri = `gs://${bucketName}/images/${gsPath}`;
       const labels = gsPath
-        .replace(fileName, "")
+        .replace(fileName, '')
         .split(/\//)
-        .filter(word => word !== "")
+        .filter(word => word !== '')
         .map(word => `tag=${word}`)
         .toString();
 
       fileData.push({
-        "image-uri": bucketUri,
-        "product-id": productId,
-        "product-display-name": displayName,
-        "product-category": productCategory,
-        "product-set-id": productSet,
+        'image-uri': bucketUri,
+        'product-id': productId,
+        'product-display-name': displayName,
+        'product-category': productCategory,
+        'product-set-id': productSet,
         labels
       });
       pgb.update(idx + 1);
@@ -101,7 +101,7 @@ export class CVCSVCLI {
     return fileData;
   }
 
-  private static async writeToFile() {
+  private static async writeToFile(): Promise<boolean> {
     const filePath = path.join(
       this.config.csvFileLocation,
       this.config.csvFilename
@@ -109,14 +109,14 @@ export class CVCSVCLI {
     const writer = createObjectCsvWriter({
       path: filePath,
       header: [
-        "image-uri",
-        "image-id",
-        "product-set-id",
-        "product-id",
-        "product-category",
-        "product-display-name",
-        "labels",
-        "bounding-poly"
+        'image-uri',
+        'image-id',
+        'product-set-id',
+        'product-id',
+        'product-category',
+        'product-display-name',
+        'labels',
+        'bounding-poly'
       ]
     });
 

@@ -5,7 +5,7 @@ import {
   bucketQuestion,
   productCategoryQuestion,
   productSetQuestion
-} from ".";
+} from '.';
 
 const fullQuestions = [
   directoryQuestion,

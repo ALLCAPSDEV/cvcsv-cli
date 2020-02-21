@@ -1,44 +1,45 @@
-import { blue } from "kleur";
-import { Choice, ProductCategoryChoiceValue } from "../interfaces/CLI";
-import { PromptObject } from "prompts";
+import { blue } from 'kleur';
+import { Choice, ProductCategoryChoiceValue } from '../interfaces/CLI';
+import { PromptObject } from 'prompts';
 
 const listOfProductCategories: Choice[] = [
   {
-    title: "apparel",
+    title: 'apparel',
     value: ProductCategoryChoiceValue.APPAREL
   },
   {
-    title: "home goods",
+    title: 'home goods',
     value: ProductCategoryChoiceValue.HOMEGOODS
   },
   {
-    title: "packaged goods",
+    title: 'packaged goods',
     value: ProductCategoryChoiceValue.PACKAGEDGOODS
   },
   {
-    title: "toys",
+    title: 'toys',
     value: ProductCategoryChoiceValue.TOYS
   }
 ];
 
 const productCategoryQuestion: PromptObject[] = [
   {
-    name: "productCategory",
-    type: "select",
-    message: `${blue("Which product category are these images for?")}`,
+    name: 'productCategory',
+    type: 'select',
+    message: `${blue('Which product category are these images for?')}`,
     choices: listOfProductCategories,
-    hint: " - Space to select"
+    hint: ' - Space to select'
   },
   {
-    name: "vertices",
+    name: 'vertices',
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     type: prev =>
-      prev === ProductCategoryChoiceValue.PACKAGEDGOODS ? "toggle" : null,
+      prev === ProductCategoryChoiceValue.PACKAGEDGOODS ? 'toggle' : null,
     message: `${blue(
-      "Would you like to use Object Localizer to add normalised vertices?"
+      'Would you like to use Object Localizer to add normalised vertices?'
     )}`,
     initial: true,
-    active: "yes",
-    inactive: "no"
+    active: 'yes',
+    inactive: 'no'
   }
 ];
 

@@ -1,12 +1,12 @@
-import { blue } from "kleur";
-import fs from "fs";
-import { PromptObject } from "prompts";
+import { blue } from 'kleur';
+import fs from 'fs';
+import { PromptObject } from 'prompts';
 
 const directoryQuestion: PromptObject = {
-  name: "rootDirectory",
-  type: "text",
-  message: `${blue("Enter the root directory: ")}`,
-  initial: "./",
+  name: 'rootDirectory',
+  type: 'text',
+  message: `${blue('Enter the root directory: ')}`,
+  initial: './',
   validate: value => {
     if (fs.existsSync(value)) {
       return true;

@@ -1,8 +1,14 @@
-import * as fs from "fs";
-import { LocalizedObjectAnnotation } from "../interfaces/objectLocalizationResponse";
-import { ImageAnnotatorClient } from "@google-cloud/vision";
+import * as fs from 'fs';
+import { LocalizedObjectAnnotation } from '../interfaces/objectLocalizationResponse';
+import { ImageAnnotatorClient } from '@google-cloud/vision';
 
-export const getBoundingPoly = async (filePath: string) => {
+export const getBoundingPoly = async (
+  filePath: string
+): Promise<{
+  name: string;
+  score: number;
+  bounds: number[];
+}[]> => {
   const client = new ImageAnnotatorClient();
   const request = {
     image: { content: fs.readFileSync(filePath) }
