@@ -5,5 +5,14 @@ module.exports = {
   },
   moduleFileExtensions: ["ts", "js", "node"],
   collectCoverage: true,
-  coverageReporters: ["lcov"]
+  coverageReporters: ["lcov"],
+  coverageDirectory: "./coverage",
+  coverageThreshold: {
+    global: {
+      branches: 50,
+      functions: 70,
+      lines: 80,
+      statements: 80
+    }
+  }
 };

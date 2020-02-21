@@ -49,6 +49,7 @@ describe("Config", () => {
           .mockImplementationOnce(() => Buffer.from(mockFile, "utf8"));
         expect(Config.readFile()).rejects.toThrowError();
       });
+<<<<<<< HEAD
     });
     describe("config file does not exist", () => {
       beforeEach(() => {
@@ -100,6 +101,21 @@ describe("Config", () => {
         await Config.completeConfig(objToCheck);
         delete questions[val];
         expect(prompts).toBeCalledTimes(1);
+=======
+    });
+    describe("config file does not exist", () => {
+      beforeEach(() => {
+        mockFsExist = jest
+          .spyOn(fs, "existsSync")
+          .mockImplementation(() => false);
+      });
+      afterAll(() => {
+        mockFsExist.mockRestore();
+      });
+      test("returns null", async () => {
+        const result = await Config.readFile();
+        expect(result).toEqual(null);
+>>>>>>> 8b28c9f... test(cvcsvcli): some tests for cvcsvcli
       });
     });
   });
@@ -109,7 +125,7 @@ describe("Config", () => {
     let questions: { [x: string]: prompts.PromptObject<string> };
     beforeEach(() => {
       promptMock = jest.spyOn(prompts, "prompt");
-      questions = Object.assign({}, Config["configQuestions"]);
+      questions = Object.assign({}, Config.configQuestions);
     });
     afterEach(() => {
       promptMock.mockRestore();
@@ -123,7 +139,7 @@ describe("Config", () => {
       expect(prompts).toBeCalledTimes(0);
       expect(result).toEqual(objToCheck);
     });
-    Object.keys(Config["configQuestions"]).forEach(val => {
+    Object.keys(Config.configQuestions).forEach(val => {
       test(`asks the remaining questions when only ${val} is in the config file`, async () => {
         objToCheck = {};
         objToCheck[val] = "test-value";
