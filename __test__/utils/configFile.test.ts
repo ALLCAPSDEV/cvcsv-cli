@@ -103,4 +103,42 @@ describe("Config", () => {
       });
     });
   });
+  describe("#completeConfig", () => {
+    let objToCheck: Partial<ConfigObj>;
+    let promptMock: jest.SpyInstance<any, unknown[]>;
+    let questions: { [x: string]: prompts.PromptObject<string> };
+    beforeEach(() => {
+      promptMock = jest.spyOn(prompts, "prompt");
+      questions = Object.assign({}, Config["configQuestions"]);
+    });
+    afterEach(() => {
+      promptMock.mockRestore();
+    });
+    test("does not ask any questions when all answers are provided", async () => {
+      objToCheck = Config["configKeys"].reduce((acc, val) => {
+        acc[val] = "test-value";
+        return acc;
+      }, {});
+      const result = await Config.completeConfig(objToCheck);
+      expect(prompts).toBeCalledTimes(0);
+      expect(result).toEqual(objToCheck);
+    });
+    Object.keys(Config["configQuestions"]).forEach(val => {
+      test(`asks the remaining questions when only ${val} is in the config file`, async () => {
+        objToCheck = {};
+        objToCheck[val] = "test-value";
+        await Config.completeConfig(objToCheck);
+        delete questions[val];
+        const expected = Object.values(questions);
+        expect(prompts).toBeCalledWith(expected);
+      });
+      test("prompts is only called once", async () => {
+        objToCheck = {};
+        objToCheck[val] = "test-value";
+        await Config.completeConfig(objToCheck);
+        delete questions[val];
+        expect(prompts).toBeCalledTimes(1);
+      });
+    });
+  });
 });
