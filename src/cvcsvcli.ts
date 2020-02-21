@@ -8,6 +8,7 @@ import { getBoundingPoly } from "./utils/getBoundingPoly";
 import { CsvData } from "./interfaces/CsvData";
 import { ConfigObj } from "./interfaces/ConfigObj";
 import { ProgressBar } from "./utils/progressBar";
+import { ReadFileResponse } from "./interfaces/ReadFileResponse";
 
 export class CVCSVCLI {
   private static config: any;
@@ -23,7 +24,7 @@ export class CVCSVCLI {
   }
 
   private static async getConfig() {
-    const configFile = await Config.readFile();
+    const configFile: null | ReadFileResponse = await Config.readFile();
     let config: prompts.Answers<string> | ConfigObj;
     if (configFile === null) {
       config = await prompts(Object.values(Config.configQuestions));

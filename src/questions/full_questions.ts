@@ -4,8 +4,7 @@ import {
   fileLocationQuestion,
   bucketQuestion,
   productCategoryQuestion,
-  productSetQuestion,
-  verticesQuestion
+  productSetQuestion
 } from ".";
 
 const fullQuestions = [
@@ -13,9 +12,8 @@ const fullQuestions = [
   filenameQuestion,
   fileLocationQuestion,
   bucketQuestion,
-  productCategoryQuestion,
-  productSetQuestion,
-  verticesQuestion
+  ...productCategoryQuestion,
+  productSetQuestion
 ];
 
 export default fullQuestions;
