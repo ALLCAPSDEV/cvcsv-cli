@@ -45,7 +45,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-          scope: "@allcapsdev"
+          scope: '@allcapsdev'
       - name: Install Deps if no cache
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci
@@ -68,7 +68,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: "@allcapsdev"
+          scope: '@allcapsdev'
       - name: Install Deps if no cache
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci

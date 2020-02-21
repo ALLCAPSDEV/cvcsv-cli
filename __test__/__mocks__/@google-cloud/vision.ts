@@ -9,7 +9,7 @@ export class ImageAnnotatorClient {
         {
           localizedObjectAnnotations: [
             {
-              name: "Foo",
+              name: 'Foo',
               score: 0.3423524,
               boundingPoly: {
                 normalizedVertices: [

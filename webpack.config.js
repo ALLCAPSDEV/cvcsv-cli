@@ -1,11 +1,11 @@
-const nodeExternals = require("webpack-node-externals");
-const path = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
+const nodeExternals = require('webpack-node-externals');
+const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: "production",
-  entry: "./src/index.ts",
-  target: "node",
+  mode: 'production',
+  entry: './src/index.ts',
+  target: 'node',
   externals: [nodeExternals()],
   optimization: {
     minimize: true,
@@ -27,7 +27,7 @@ module.exports = {
         }
       })
     ],
-    moduleIds: "size",
+    moduleIds: 'size',
     usedExports: true
   },
   module: {
@@ -36,7 +36,7 @@ module.exports = {
         test: /\.tsx?$/,
         use: [
           {
-            loader: "ts-loader",
+            loader: 'ts-loader',
             options: {
               experimentalWatchApi: true
             }
@@ -46,10 +46,10 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "lib")
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'lib')
   }
 };
