@@ -1,12 +1,12 @@
 module.exports = {
-  roots: ["<rootDir>/__test__"],
+  roots: ['<rootDir>/__test__'],
   transform: {
-    "^.+\\.ts$": "ts-jest"
+    '^.+\\.ts$': 'ts-jest'
   },
-  moduleFileExtensions: ["ts", "js", "node"],
+  moduleFileExtensions: ['ts', 'js', 'node'],
   collectCoverage: true,
-  coverageReporters: ["lcov"],
-  coverageDirectory: "./coverage",
+  coverageReporters: ['lcov'],
+  coverageDirectory: './coverage',
   coverageThreshold: {
     global: {
       branches: 75,
