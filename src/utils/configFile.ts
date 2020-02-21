@@ -30,9 +30,9 @@ export class Config {
     csvFileLocation: fileLocationQuestion,
     csvFilename: filenameQuestion,
     productCategory: productCategoryQuestion[0],
-    vertices: productCategoryQuestion[1],
     productSet: productSetQuestion,
-    rootDirectory: directoryQuestion
+    rootDirectory: directoryQuestion,
+    vertices: productCategoryQuestion[1]
   };
 
   public static async readFile(): Promise<any> {
