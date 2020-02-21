@@ -36,9 +36,9 @@ const productCategoryQuestion: PromptObject[] = [
     message: `${blue(
       "Would you like to use Object Localizer to add normalised vertices?"
     )}`,
-    initial: false,
-    active: "no",
-    inactive: "yes"
+    initial: true,
+    active: "yes",
+    inactive: "no"
   }
 ];
 

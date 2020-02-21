@@ -49,7 +49,6 @@ describe("Config", () => {
           .mockImplementationOnce(() => Buffer.from(mockFile, "utf8"));
         expect(Config.readFile()).rejects.toThrowError();
       });
-<<<<<<< HEAD
     });
     describe("config file does not exist", () => {
       beforeEach(() => {
@@ -101,21 +100,6 @@ describe("Config", () => {
         await Config.completeConfig(objToCheck);
         delete questions[val];
         expect(prompts).toBeCalledTimes(1);
-=======
-    });
-    describe("config file does not exist", () => {
-      beforeEach(() => {
-        mockFsExist = jest
-          .spyOn(fs, "existsSync")
-          .mockImplementation(() => false);
-      });
-      afterAll(() => {
-        mockFsExist.mockRestore();
-      });
-      test("returns null", async () => {
-        const result = await Config.readFile();
-        expect(result).toEqual(null);
->>>>>>> 8b28c9f... test(cvcsvcli): some tests for cvcsvcli
       });
     });
   });
