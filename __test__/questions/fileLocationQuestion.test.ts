@@ -2,7 +2,7 @@ jest.mock("fs");
 import fileLocationQuestion from "../../src/questions/fileLocationQuestion";
 import { Answers, PromptObject } from "prompts";
 import * as fs from "fs";
-describe("directoryQuestion", () => {
+describe("fileLocationQuestion", () => {
   describe("#validate", () => {
     let fsExistsSyncMock: jest.SpyInstance<boolean, [fs.PathLike]>;
     const prev = "prev";
@@ -19,14 +19,14 @@ describe("directoryQuestion", () => {
     afterEach(() => {
       fsExistsSyncMock.mockRestore();
     });
-    test("returns true if dir exists", () => {
+    test("returns true if the file exists", () => {
       fsExistsSyncMock.mockImplementationOnce(() => true);
       if (fileLocationQuestion.validate) {
         const result = fileLocationQuestion.validate(prev, val, prompt);
         expect(result).toEqual(true);
       }
     });
-    test("returns a message if the directory doesn't exist", () => {
+    test("returns a message if the file doesn't exist", () => {
       fsExistsSyncMock.mockImplementationOnce(() => false);
       if (fileLocationQuestion.validate) {
         const result = fileLocationQuestion.validate(prev, val, prompt);
