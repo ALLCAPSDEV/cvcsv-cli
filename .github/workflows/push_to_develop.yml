@@ -1,14 +1,40 @@
 on:
   push:
     branches:
-    - develop
+      - develop
 jobs:
   noticeFile:
     name: Create Notice File
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: ClearlyNoticed Action
-      uses: dabutvin/chive-action@1.1.0
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - uses: actions/checkout@v1
+      - name: ClearlyNoticed Action
+        uses: dabutvin/chive-action@1.1.0
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  coverage:
+    name: Send code coverage to CodeClimate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: npm cache
+        id: npm-cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json')}}
+      - uses: actions/setup-node@v1.1.0
+        with:
+          node-version: "12"
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: run build if cache
+        if: steps.npm-cache.outputs.cache-hit == 'true'
+        run: npm run build
+      - uses: paambaati/codeclimate-action@v2.5.3
+        name: Code Climate Coverage Action
+        env:
+          CC_TEST_REPORTER_ID: ${{secrets.CC_REPORTER_ID}}
+        with:
+          coverageCommand: npm run test
