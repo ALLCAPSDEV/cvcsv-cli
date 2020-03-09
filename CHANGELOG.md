@@ -2,12 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.1.11](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.8...v1.1.11) (2020-03-09)
+### [1.1.12](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.11...v1.1.12) (2020-03-09)
 
 ### Bug Fixes
 
-- **codeclimate:** forgot to update the jest settings ([1d7fd59](https://github.com/allcapsdev/cvcsv-cli/commit/1d7fd59f730988e5ae68f72e6e93bacb641cf3b4))
-- **test:** fixed tests based on Code Climate findings ([806e012](https://github.com/allcapsdev/cvcsv-cli/commit/806e01211dbcd5376c23a7c1786795fdc9e4a888))
+- **question error:** product category had [0] by mistake ([0f3197e](https://github.com/allcapsdev/cvcsv-cli/commit/0f3197ebfbc309906bd1ee4caf3e2c4e3db27b36)), closes [#173](https://github.com/allcapsdev/cvcsv-cli/issues/173)
+- **unused import:** unused import of fullQuestions removed ([be9937f](https://github.com/allcapsdev/cvcsv-cli/commit/be9937faf4704c4c1d6dd538f269ea81a674c80d))
+
+### [1.1.11](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.8...v1.1.11) (2020-03-09)
 
 ### [1.1.10](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.9...v1.1.10) (2020-03-03)
 
