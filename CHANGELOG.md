@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.11](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.8...v1.1.11) (2020-03-09)
+
+### Bug Fixes
+
+- **codeclimate:** forgot to update the jest settings ([1d7fd59](https://github.com/allcapsdev/cvcsv-cli/commit/1d7fd59f730988e5ae68f72e6e93bacb641cf3b4))
+- **test:** fixed tests based on Code Climate findings ([806e012](https://github.com/allcapsdev/cvcsv-cli/commit/806e01211dbcd5376c23a7c1786795fdc9e4a888))
+
 ### [1.1.10](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.9...v1.1.10) (2020-03-03)
 
 ### Bug Fixes
