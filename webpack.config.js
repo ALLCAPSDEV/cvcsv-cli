@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/camelcase */
 const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -8,27 +11,39 @@ module.exports = {
   target: 'node',
   externals: [nodeExternals()],
   optimization: {
+    noEmitOnErrors: true,
     minimize: true,
     minimizer: [
       new TerserPlugin({
         parallel: true,
         extractComments: false,
         terserOptions: {
-          mangle: true,
+          ie8: false,
+          mangle: {
+            eval: true,
+            module: true
+          },
           compress: {
-            passes: 500
+            passes: 5,
+            hoist_funs: true,
+            toplevel: true,
+            inline: 3,
+            keep_fargs: false,
+            module: true,
+            pure_getters: true,
+            unsafe: true
           },
           toplevel: true,
           keep_classnames: false,
           keep_fnames: false,
           output: {
-            comments: false
+            comments: false,
+            beautify: false,
+            quote_style: 3
           }
         }
       })
-    ],
-    moduleIds: 'size',
-    usedExports: true
+    ]
   },
   module: {
     rules: [

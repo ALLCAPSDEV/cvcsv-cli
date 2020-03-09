@@ -107,7 +107,8 @@
   },
   "size-limit": [
     {
-      "limit": "15 KB",
+      "limit": "11 KB",
+      "path": "./lib/index.js",
       "config": "./webpack.config.js",
       "gzip": false
     }

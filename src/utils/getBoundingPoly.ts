@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-import { LocalizedObjectAnnotation } from '../interfaces/objectLocalizationResponse';
 import { ImageAnnotatorClient } from '@google-cloud/vision';
 
 export const getBoundingPoly = async (
