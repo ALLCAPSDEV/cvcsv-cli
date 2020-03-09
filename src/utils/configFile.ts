@@ -28,7 +28,7 @@ export class Config {
     bucketName: bucketQuestion,
     csvFileLocation: fileLocationQuestion,
     csvFilename: filenameQuestion,
-    productCategory: productCategoryQuestion[0],
+    productCategory: productCategoryQuestion,
     productSet: productSetQuestion,
     rootDirectory: directoryQuestion
   };
