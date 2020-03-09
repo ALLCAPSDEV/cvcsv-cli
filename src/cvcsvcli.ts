@@ -1,5 +1,4 @@
 import { Config } from "./utils/configFile";
-import { fullQuestions } from "./questions";
 import prompts from "prompts";
 import { Logger } from "./utils/logger";
 import path from "path";
