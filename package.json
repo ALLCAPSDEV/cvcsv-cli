@@ -20,7 +20,7 @@
     "clean": "run-p prettier clean:lib clean:docs clean:node_modules",
     "commit": "git-cz",
     "commitlint": "commitlint -e",
-    "release": "standard-version -s",
+    "release": "semantic-release",
     "start:dev": "ts-node -T src/index.ts",
     "tscov": "tscov",
     "tscov:d": "tscov --details",
@@ -30,7 +30,8 @@
     "prepare": "npm run build",
     "prettier": "prettier --parser typescript --write \"src/**/*.ts\"",
     "pretty-quick": "pretty-quick",
-    "size": "size-limit"
+    "size": "size-limit",
+    "get-version": "echo $npm_package_version"
   },
   "repository": {
     "type": "git",
@@ -67,8 +68,8 @@
     "prettier": "2.0.2",
     "pretty-quick": "2.0.1",
     "rimraf": "3.0.2",
+    "semantic-release": "17.0.4",
     "size-limit": "4.4.0",
-    "standard-version": "7.1.0",
     "terser-webpack-plugin": "2.3.5",
     "ts-jest": "25.2.1",
     "ts-loader": "6.2.2",
@@ -103,5 +104,23 @@
       "config": "./webpack.config.js",
       "gzip": false
     }
-  ]
+  ],
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
 }
