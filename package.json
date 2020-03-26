@@ -106,6 +106,7 @@
     }
   ],
   "release": {
+    "branches": "develop",
     "plugins": [
       [
         "@semantic-release/commit-analyzer",
