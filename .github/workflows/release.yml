@@ -1,0 +1,91 @@
+on:
+  schedule:
+    - cron: "32 20 * * 1-5"
+jobs:
+  test:
+    name: Test on node ${{ matrix.node_version }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node_version: [8, 10, 11, 12, 13]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: develop
+      - name: npm cache
+        id: npm-cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node_version }}
+      - name: Execute tests
+        run: npm run test
+  publish-npm:
+    needs: [test]
+    name: Release to NPM and GPR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: develop
+          fetch-depth: 0
+      - name: npm cache
+        id: npm-cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: Get PreRelease version
+        id: preversion
+        run: echo "::set-output name=version::$(npm run get-version --silent)"
+      - name: Release to npm and github
+        id: release
+        env:
+          NPM_TOKEN: ${{secrets.npm_token}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_AUTHOR_NAME: ALLCAPSDEV-BOT
+          GIT_AUTHOR_EMAIL: matt@mattriley.me
+          GIT_COMMITTER_NAME: ALLCAPSDEV-BOT
+          GIT_COMMITTER_EMAIL: matt@mattriley.me
+        run: npm run release
+      - name: Get PostRelease version
+        id: postversion
+        run: echo "::set-output name=version::$(npm run get-version --silent)"
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: "@allcapsdev"
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - run: npm publish to gpr
+        if: steps.preversion.outputs.version != steps.postversion.outputs.version
+        env:
+          NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Create PR to merge release into master
+        if: steps.preversion.outputs.version != steps.postversion.outputs.version
+        uses: peter-evans/create-pull-request@v2.4.4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(release): ${{ steps.postversion.outputs.version }}"
+          committer: ALLCAPSDEV-BOT <matt@mattriley.me>
+          author: ALLCAPSDEV-BOT <matt@mattriley.me>
+          title: "chore(release): ${{ steps.postversion.outputs.version }}"
+          body: "Version bump in package.json and package-lock.json for release [${{ steps.postversion.outputs.version }}](https://github.com/${{github.repository}}/releases/tag/v${{ steps.postversion.outputs.version }})"
+          branch: version-bump/${{ steps.postversion.outputs.version }}
+          base: master
