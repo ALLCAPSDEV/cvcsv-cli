@@ -30,6 +30,7 @@ jobs:
         if: steps.preversion.outputs.version != steps.postversion.outputs.version
         uses: repo-sync/pull-request@v2
         with:
+          source_branch: "develop"
           destination_branch: "master"
           pr_title: "Daily Release"
           pr_body: "AUTOMATED PR"
