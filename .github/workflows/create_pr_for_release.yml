@@ -1,7 +1,7 @@
 name: Create release
 on:
   schedule:
-    - cron: "45 22 * * 1-5"
+    - cron: "30 10 * * 1-5"
 jobs:
   create_pr:
     runs-on: ubuntu-latest
@@ -10,13 +10,10 @@ jobs:
         with:
           ref: develop
       - name: Create PR to merge release into master
-        uses: peter-evans/create-pull-request@v2.4.4
+        uses: repo-sync/pull-request@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(release): daily release"
-          committer: ALLCAPSDEV-BOT <matt@mattriley.me>
-          author: ALLCAPSDEV-BOT <matt@mattriley.me>
-          title: "chore(release): daily release"
-          body: "Version bump in package.json and package-lock.json for release"
-          branch: daily-release
-          base: master
+          source_branch: develop
+          destination_branch: "master"
+          pr_title: "Daily Release"
+          pr_body: "AUTOMATED PR"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
