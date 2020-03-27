@@ -1,7 +1,8 @@
 name: Create release
 on:
-  schedule:
-    - cron: "00 22 * * 1-5"
+  push:
+    branches:
+      - master
 jobs:
   test:
     name: Test on node ${{ matrix.node_version }}
@@ -10,9 +11,7 @@ jobs:
       matrix:
         node_version: [8, 10, 11, 12, 13]
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: develop
+      - uses: actions/checkout@v1
       - name: npm cache
         id: npm-cache
         uses: actions/cache@v1
@@ -33,10 +32,7 @@ jobs:
     name: Release to NPM and GPR
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: develop
-          fetch-depth: 0
+      - uses: actions/checkout@v1
       - name: npm cache
         id: npm-cache
         uses: actions/cache@v1
@@ -56,37 +52,30 @@ jobs:
       - name: Release to npm and github
         id: release
         env:
-          NPM_TOKEN: ${{secrets.npm_token}}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_AUTHOR_NAME: ALLCAPSDEV-BOT
-          GIT_AUTHOR_EMAIL: matt@mattriley.me
-          GIT_COMMITTER_NAME: ALLCAPSDEV-BOT
-          GIT_COMMITTER_EMAIL: matt@mattriley.me
         run: npm run release
       - name: Get PostRelease version
         id: postversion
         run: echo "::set-output name=version::$(npm run get-version --silent)"
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-          scope: "@allcapsdev"
-      - name: Install Deps if no cache
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm ci
-      - run: npm publish to gpr
+      - name: Create PR - master
         if: steps.preversion.outputs.version != steps.postversion.outputs.version
-        env:
-          NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Create PR to merge release into master
-        if: steps.preversion.outputs.version != steps.postversion.outputs.version
-        uses: peter-evans/create-pull-request@v2.4.4
+        uses: repo-sync/pull-request@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(release): ${{ steps.postversion.outputs.version }}"
-          committer: ALLCAPSDEV-BOT <matt@mattriley.me>
-          author: ALLCAPSDEV-BOT <matt@mattriley.me>
-          title: "chore(release): ${{ steps.postversion.outputs.version }}"
-          body: "Version bump in package.json and package-lock.json for release [${{ steps.postversion.outputs.version }}](https://github.com/${{github.repository}}/releases/tag/v${{ steps.postversion.outputs.version }})"
-          branch: version-bump/${{ steps.postversion.outputs.version }}
-          base: master
+          pr_title: "Daily Release - Bumped version"
+          pr_body: "🎉 AUTOMATED PR  🎉"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 12
+      #     registry-url: https://npm.pkg.github.com/
+      #     scope: "@allcapsdev"
+      # - name: Install Deps if no cache
+      #   if: steps.npm-cache.outputs.cache-hit != 'true'
+      #   run: npm ci
+      # - run: npm publish to gpr
+      #   if: steps.preversion.outputs.version != steps.postversion.outputs.version
+      #   env:
+      #     NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      # - name: Create PR to merge release into master
+      #   if: steps.preversion.outputs.version != steps.postversion.outputs.version
