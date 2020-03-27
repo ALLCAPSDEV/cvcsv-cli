@@ -1,7 +1,7 @@
 name: Create release
 on:
   schedule:
-    - cron: "30 10 * * 1-5"
+    - cron: "30 13 * * 1-5"
 jobs:
   create_pr:
     runs-on: ubuntu-latest
