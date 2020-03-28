@@ -1,16 +1,18 @@
 name: Create release
 on:
   schedule:
-    - cron: "30 12 * * 1-5"
+    - cron: "00 11 * * 1-5"
 jobs:
   create_pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          ref: develop
+          fetch-depth: 0
       - name: Create PR to merge release into master
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: "develop"
           destination_branch: "master"
           pr_title: "Daily Release"
           pr_body: "AUTOMATED PR"
