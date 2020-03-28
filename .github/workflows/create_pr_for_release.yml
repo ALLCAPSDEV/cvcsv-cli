@@ -1,16 +1,33 @@
 name: Create release
 on:
   schedule:
-    - cron: "30 13 * * 1-5"
+    - cron: "00 15 * * 1-6"
 jobs:
   create_pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: npm cache
+        id: npm-cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: Get PreRelease version
+        id: preversion
+        run: echo "::set-output name=version::$(npm run get-version --silent)"
+      - name: Create release
+        run: npm run release
+      - name: Get PostRelease version
+        id: postversion
+        run: echo "::set-output name=version::$(npm run get-version --silent)"
       - name: Create PR to merge release into master
+        if: steps.preversion.outputs.version != steps.postversion.outputs.version
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: "develop"
           destination_branch: "master"
           pr_title: "Daily Release"
           pr_body: "AUTOMATED PR"
