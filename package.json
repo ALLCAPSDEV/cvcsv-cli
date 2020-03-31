@@ -19,7 +19,7 @@
     "clean": "run-p prettier clean:lib clean:docs clean:node_modules",
     "commit": "git-cz",
     "commitlint": "commitlint -e",
-    "release": "standard-version",
+    "release": "standard-version -s",
     "start:dev": "ts-node -T src/index.ts",
     "tscov": "tscov",
     "tscov:d": "tscov --details",
