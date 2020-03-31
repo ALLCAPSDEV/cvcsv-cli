@@ -3,7 +3,6 @@
   "version": "1.1.15",
   "description": "CLI for creating CSV for Cloud Vision Product Search API",
   "main": "./lib/index.js",
-  "private": false,
   "bin": {
     "cvcsv": "./bin/index.js"
   },
@@ -30,7 +29,8 @@
     "prepare": "npm run build",
     "prettier": "prettier --parser typescript --write \"src/**/*.ts\"",
     "pretty-quick": "pretty-quick",
-    "size": "size-limit"
+    "size": "size-limit",
+    "get-version": "echo $npm_package_version"
   },
   "repository": {
     "type": "git",

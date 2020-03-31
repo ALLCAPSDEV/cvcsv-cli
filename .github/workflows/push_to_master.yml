@@ -20,13 +20,13 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node_version }}
-      - name: Install Deps if no cache
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm ci
       - name: Execute tests
         run: npm run test
 
