@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.15](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.14...v1.1.15) (2020-03-31)
+
+### Bug Fixes
+
+- **push_to_master:** fix push 2 master until automated releases finished ([#212](https://github.com/allcapsdev/cvcsv-cli/issues/212)) ([7d49b03](https://github.com/allcapsdev/cvcsv-cli/commit/7d49b032c86b2598ed55f6e536030e20816e21e5))
+
 ### [1.1.14](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.13...v1.1.14) (2020-03-25)
 
 ### [1.1.13](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.12...v1.1.13) (2020-03-18)
