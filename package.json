@@ -1,6 +1,6 @@
 {
   "name": "@allcapsdev/cvcsv-cli",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "description": "CLI for creating CSV for Cloud Vision Product Search API",
   "main": "./lib/index.js",
   "private": false,
@@ -57,12 +57,12 @@
     "@size-limit/preset-small-lib": "4.4.0",
     "@types/figlet": "1.2.0",
     "@types/jest": "25.1.4",
-    "@types/node": "13.9.4",
+    "@types/node": "13.9.8",
     "@types/prompts": "2.0.5",
     "babel-loader": "8.1.0",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.1.0",
-    "jest": "25.1.0",
+    "jest": "25.2.4",
     "npm-run-all": "4.1.5",
     "prettier": "2.0.2",
     "pretty-quick": "2.0.1",
@@ -70,7 +70,7 @@
     "size-limit": "4.4.0",
     "standard-version": "7.1.0",
     "terser-webpack-plugin": "2.3.5",
-    "ts-jest": "25.2.1",
+    "ts-jest": "25.3.0",
     "ts-loader": "6.2.2",
     "ts-node": "8.8.1",
     "typedoc": "0.17.3",
@@ -92,16 +92,16 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "standard-version": {
-    "skip": {
-      "tag": true
-    }
-  },
   "size-limit": [
     {
       "limit": "9 KB",
       "config": "./webpack.config.js",
       "gzip": false
     }
-  ]
+  ],
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
+  }
 }
