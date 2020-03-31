@@ -1,8 +1,10 @@
-name: Create release
+name: Node.js Package
+
 on:
   push:
     branches:
       - master
+      - release-*
 jobs:
   test:
     name: Test on node ${{ matrix.node_version }}
@@ -27,9 +29,9 @@ jobs:
           node-version: ${{ matrix.node_version }}
       - name: Execute tests
         run: npm run test
+
   publish-npm:
-    needs: [test]
-    name: Release to NPM and GPR
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -46,36 +48,29 @@ jobs:
       - name: Install Deps if no cache
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci
-      - name: Get PreRelease version
-        id: preversion
-        run: echo "::set-output name=version::$(npm run get-version --silent)"
-      - name: Release to npm and github
-        id: release
+      - run: npm publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run release
-      - name: Get PostRelease version
-        id: postversion
-        run: echo "::set-output name=version::$(npm run get-version --silent)"
-      - name: Create PR - master
-        if: steps.preversion.outputs.version != steps.postversion.outputs.version
-        uses: repo-sync/pull-request@v2
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  publish-gpr:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: npm cache
+        id: npm-cache
+        uses: actions/cache@v1
         with:
-          pr_title: "Daily Release - Bumped version"
-          pr_body: "🎉 AUTOMATED PR  🎉"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-      # - uses: actions/setup-node@v1
-      #   with:
-      #     node-version: 12
-      #     registry-url: https://npm.pkg.github.com/
-      #     scope: "@allcapsdev"
-      # - name: Install Deps if no cache
-      #   if: steps.npm-cache.outputs.cache-hit != 'true'
-      #   run: npm ci
-      # - run: npm publish to gpr
-      #   if: steps.preversion.outputs.version != steps.postversion.outputs.version
-      #   env:
-      #     NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      # - name: Create PR to merge release into master
-      #   if: steps.preversion.outputs.version != steps.postversion.outputs.version
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: "@allcapsdev"
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
