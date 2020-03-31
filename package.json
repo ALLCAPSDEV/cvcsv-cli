@@ -98,5 +98,10 @@
       "config": "./webpack.config.js",
       "gzip": false
     }
-  ]
+  ],
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
+  }
 }
