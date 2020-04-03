@@ -56,7 +56,7 @@
     "@liftr/tscov": "1.4.5",
     "@size-limit/preset-small-lib": "4.4.0",
     "@types/figlet": "1.2.0",
-    "@types/jest": "25.1.4",
+    "@types/jest": "25.1.5",
     "@types/node": "13.11.0",
     "@types/prompts": "2.0.5",
     "babel-loader": "8.1.0",
