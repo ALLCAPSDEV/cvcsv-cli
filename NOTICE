@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ------
 
-** glob-parent; version 5.1.0 -- https://github.com/gulpjs/glob-parent#readme
+** glob-parent; version 5.1.1 -- https://github.com/gulpjs/glob-parent#readme
 Copyright (c) 2015, 2019 Elan Shanker
 
 The ISC License
@@ -399,7 +399,7 @@ THE SOFTWARE.
 
 ------
 
-** picomatch; version 2.2.1 -- https://github.com/micromatch/picomatch
+** picomatch; version 2.2.2 -- https://github.com/micromatch/picomatch
 Copyright (c) 2017-present, Jon Schlinkert.
 Copyright (c) 2017-present, Jon Schlinkert (https://github.com/jonschlinkert).
 
