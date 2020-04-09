@@ -4,7 +4,7 @@ import { bold } from "kleur";
 describe("Logger", () => {
   let csLogMock: jest.SpyInstance<void, [any?, ...any[]]>;
   let csErrMock: jest.SpyInstance<void, [any?, ...any[]]>;
-  let proExitMock: jest.SpyInstance<any, unknown[]>;
+  let proExitMock: jest.SpyInstance<never, [number?]>;
   beforeEach(() => {
     csLogMock = jest.spyOn(console, "log").mockImplementation(() => true);
     csErrMock = jest.spyOn(console, "error").mockImplementation(() => true);

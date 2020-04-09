@@ -1,10 +1,14 @@
 import { CVCSVCLI } from "../src/cvcsvcli";
 import prompts from "prompts";
 import { Config } from "../src/utils/configFile";
+import { ConfigObj } from "../src/interfaces/ConfigObj";
 describe("CVCSVCLI", () => {
   describe("#getConfig", () => {
     let configRFMock: jest.SpyInstance<any, unknown[]>;
-    let configCCMock: jest.SpyInstance<any, unknown[]>;
+    let configCCMock: jest.SpyInstance<
+      Promise<Partial<ConfigObj>>,
+      [Partial<ConfigObj>]
+    >;
     let promptMock: jest.SpyInstance<any, unknown[]>;
     beforeEach(() => {
       promptMock = jest.spyOn(prompts, "prompt");
@@ -18,7 +22,7 @@ describe("CVCSVCLI", () => {
     test("config file null - prompt called with all questions", async () => {
       const expected = {
         rootDirectory: "./test-root/",
-        csvFileLocation: "./test-file/"
+        csvFileLocation: "./test-file/",
       };
       configRFMock.mockImplementation(() => null);
       promptMock.mockImplementation(() => expected);
@@ -32,10 +36,10 @@ describe("CVCSVCLI", () => {
     test("config file not null - completeConfig called", async () => {
       const mockFile = {
         rootDirectory: "./test-root/",
-        csvFileLocation: "./test-file-loc/"
+        csvFileLocation: "./test-file-loc/",
       };
       configRFMock.mockImplementation(() => mockFile);
-      configCCMock.mockImplementation(() => mockFile);
+      configCCMock.mockImplementation(async () => mockFile);
       await CVCSVCLI["getConfig"]();
       expect(configCCMock).toBeCalledTimes(1);
       expect(configCCMock).toBeCalledWith(mockFile);

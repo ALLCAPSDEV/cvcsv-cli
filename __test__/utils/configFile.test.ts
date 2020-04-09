@@ -6,13 +6,13 @@ import prompts from "prompts";
 
 describe("Config", () => {
   describe("#readFile", () => {
-    let mockFsRead: jest.SpyInstance<any, unknown[]>;
-    let mockFsExist: jest.SpyInstance<any, unknown[]>;
+    let mockFsRead: jest.SpyInstance<unknown>;
+    let mockFsExist: jest.SpyInstance<boolean, [fs.PathLike]>;
     describe("config file exists", () => {
       beforeEach(() => {
         const mockFile = JSON.stringify({
           bucketName: "testBucket",
-          csvFileLocation: "./test.csv"
+          csvFileLocation: "./test.csv",
         });
         mockFsRead = jest
           .spyOn(fs, "readFileSync")
@@ -29,7 +29,7 @@ describe("Config", () => {
         const result = await Config.readFile();
         expect(result).toEqual({
           bucketName: "testBucket",
-          csvFileLocation: "./test.csv"
+          csvFileLocation: "./test.csv",
         });
       });
       test("throws error when unable to read file", async () => {
@@ -85,7 +85,7 @@ describe("Config", () => {
       expect(prompts).toBeCalledTimes(0);
       expect(result).toEqual(objToCheck);
     });
-    Object.keys(Config.configQuestions).forEach(val => {
+    Object.keys(Config.configQuestions).forEach((val) => {
       test(`asks the remaining questions when only ${val} is in the config file`, async () => {
         objToCheck = {};
         objToCheck[val] = "test-value";
