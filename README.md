@@ -1,7 +1,8 @@
 # cvcsv-cli
-[![npm](https://img.shields.io/npm/dm/@allcapsdev/cvcsv-cli)](https://www.npmjs.com/package/@allcapsdev/cvcsv-cli) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ALLCAPSDEV/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ALLCAPSDEV/cvcsv-cli/context:javascript) [![Maintainability](https://api.codeclimate.com/v1/badges/eb16470ddd4349898ad9/maintainability)](https://codeclimate.com/github/ALLCAPSDEV/cvcsv-cli/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/eb16470ddd4349898ad9/test_coverage)](https://codeclimate.com/github/ALLCAPSDEV/cvcsv-cli/test_coverage)
+
+[![npm](https://img.shields.io/npm/dm/@allcapsdev/cvcsv-cli)](https://www.npmjs.com/package/@allcapsdev/cvcsv-cli) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This is a tool to make the process of creating the bulk import CSV file for [Google Clouds Vision Product Search API](https://cloud.google.com/vision/product-search/docs/) a little easier.
 
