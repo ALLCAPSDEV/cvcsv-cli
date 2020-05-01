@@ -1,6 +1,6 @@
 # cvcsv-cli
-
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ALLCAPSDEV/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ALLCAPSDEV/cvcsv-cli/context:javascript) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm](https://img.shields.io/npm/dm/@allcapsdev/cvcsv-cli)](https://www.npmjs.com/package/@allcapsdev/cvcsv-cli) [![Test Coverage](https://api.codeclimate.com/v1/badges/eb16470ddd4349898ad9/test_coverage)](https://codeclimate.com/github/ALLCAPSDEV/cvcsv-cli/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/eb16470ddd4349898ad9/maintainability)](https://codeclimate.com/github/ALLCAPSDEV/cvcsv-cli/maintainability)
+[![npm](https://img.shields.io/npm/dm/@allcapsdev/cvcsv-cli)](https://www.npmjs.com/package/@allcapsdev/cvcsv-cli) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ALLCAPSDEV/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ALLCAPSDEV/cvcsv-cli/context:javascript) [![Maintainability](https://api.codeclimate.com/v1/badges/eb16470ddd4349898ad9/maintainability)](https://codeclimate.com/github/ALLCAPSDEV/cvcsv-cli/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/eb16470ddd4349898ad9/test_coverage)](https://codeclimate.com/github/ALLCAPSDEV/cvcsv-cli/test_coverage)
 
 This is a tool to make the process of creating the bulk import CSV file for [Google Clouds Vision Product Search API](https://cloud.google.com/vision/product-search/docs/) a little easier.
 
@@ -72,6 +72,5 @@ If no file is there then you will get the full set of questions.
 
 ## TODO
 
-- Improve the tests.
 - Add to my personal Homebrew tap to make updates/upgrades easier to manage.
 - Confirmation screen.
