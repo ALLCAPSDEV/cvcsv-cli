@@ -1,15 +1,14 @@
-on: push
+on:
+  schedule:
+    - cron: "0 0 * * 1-5"
 jobs:
-  prerelease:
-    name: Create a prerelease
+  release:
+    name: Create a release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git checkout -b release
       - run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
-      - run: git branch
       - run: git checkout master
-      - run: git branch
       - name: npm cache
         id: npm-cache
         uses: actions/cache@v1
@@ -23,8 +22,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "14.x"
-      - run: npm run release -- --dry-run
-      - uses: actions/checkout@v2
-        with:
-          ref: "master"
-      - run: cat package.json | grep version
+      - run: npm run release
+      - run: git push --follow-tags origin master
+      - run: git checkout develop
+      - run: git merge master
+      - run: git push origin develop
