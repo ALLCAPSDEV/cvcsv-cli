@@ -1,0 +1,30 @@
+on: push
+jobs:
+  prerelease:
+    name: Create a prerelease
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git checkout -b release
+      - run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+      - run: git branch
+      - run: git checkout master
+      - run: git branch
+      - name: npm cache
+        id: npm-cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci --silent
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - run: npm run release -- --dry-run
+      - uses: actions/checkout@v2
+        with:
+          ref: "master"
+      - run: cat package.json | grep version
