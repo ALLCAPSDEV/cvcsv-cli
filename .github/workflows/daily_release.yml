@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "45 0 * * 1-5"
+    - cron: "30 1 * * 1-5"
 jobs:
   release:
     name: Create a release
@@ -8,9 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
-      - run: git checkout develop && git pull
-      - run: git checkout master && git pull
-      - run: git merge develop    
+      - run: git checkout master
+      - run: git merge develop   
       - name: npm cache
         id: npm-cache
         uses: actions/cache@v1
