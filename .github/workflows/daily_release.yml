@@ -64,6 +64,7 @@ jobs:
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
+          source_branch: "master"
           destination_branch: "develop"
           pr_title: "Daily Release"
           pr_body: ":tada: *An automated PR*"
