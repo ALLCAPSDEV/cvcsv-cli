@@ -1,30 +1,69 @@
+name: Daily Release
 on:
   schedule:
-    - cron: "30 1 * * 1-5"
+    - cron: "00 13 * * 1-5"
 jobs:
-  release:
+  build-release:
     name: Create a release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: git fetch --prune --unshallow
+      - run: |
+          git config --local user.email "matt@mattriley.me"
+          git config --local user.name "Matt Riley"
       - run: git checkout master
-      - run: git merge develop   
-      - name: npm cache
-        id: npm-cache
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      - name: Install Deps if no cache
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+      - run: git merge develop
+      - name: Install Deps
         run: npm ci --silent
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: "14.x"
       - run: npm run release
+      - run: git remote set-url origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
       - run: git push --follow-tags origin master
-      - run: git checkout develop
-      - run: git merge master
-      - run: git push origin develop
+
+  publish-npm:
+    needs: build-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git checkout master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  publish-gpr:
+    needs: build-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git checkout master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: "@allcapsdev"
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  create-pr:
+    name: Create PR on push to release
+    needs: build-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git checkout master
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "develop"
+          pr_title: "Daily Release"
+          pr_body: ":tada: *An automated PR*"
+          pr_label: "autorebase"
+          pr_draft: false
+          github_token: ${{ secrets.GITHUB_TOKEN }}
