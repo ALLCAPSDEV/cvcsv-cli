@@ -1,7 +1,7 @@
 name: Daily Release
 on:
   schedule:
-    - cron: "00 13 * * 1-5"
+    - cron: "45 13 * * 1-5"
 jobs:
   build-release:
     name: Create a release
@@ -25,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
       - run: git checkout master
       - uses: actions/setup-node@v1
         with:
@@ -40,6 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
       - run: git checkout master
       - uses: actions/setup-node@v1
         with:
@@ -57,6 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
       - run: git checkout master
       - name: pull-request
         uses: repo-sync/pull-request@v2
