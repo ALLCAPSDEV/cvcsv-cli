@@ -1,7 +1,7 @@
 name: Daily Release
 on:
   schedule:
-    - cron: "15 15 * * 1-5"
+    - cron: "20 16 * * 1-5"
 jobs:
   build-release:
     name: Create a release
