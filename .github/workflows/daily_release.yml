@@ -1,7 +1,7 @@
 name: Daily Release
 on:
   schedule:
-    - cron: "45 13 * * 1-5"
+    - cron: "15 15 * * 1-5"
 jobs:
   build-release:
     name: Create a release
@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run release script
         run: ./scripts/release.sh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-npm:
     needs: build-release

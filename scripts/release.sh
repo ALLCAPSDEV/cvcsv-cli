@@ -10,7 +10,7 @@ then
     git merge develop
     npm ci --silent
     npm run release
-    git remote set-url origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
+    git remote set-url origin https://${GITHUB_ACTOR}:${{ GH_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
     git push --follow-tags origin master
     exit 0
 else
