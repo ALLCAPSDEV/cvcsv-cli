@@ -8,17 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git fetch --prune --unshallow
-      - run: |
-          git config --local user.email "matt@mattriley.me"
-          git config --local user.name "Matt Riley"
-      - run: git checkout master
-      - run: git merge develop
-      - name: Install Deps
-        run: npm ci --silent
-      - run: npm run release
-      - run: git remote set-url origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
-      - run: git push --follow-tags origin master
+      - name: Run release script
+        run: ./scripts/release.sh
 
   publish-npm:
     needs: build-release
