@@ -2,8 +2,8 @@ import { Logger } from "../../src/utils/logger";
 import { ConsoleMessage } from "../../src/interfaces/Console";
 import { bold } from "kleur";
 describe("Logger", () => {
-  let csLogMock: jest.SpyInstance<void, [any?, ...any[]]>;
-  let csErrMock: jest.SpyInstance<void, [any?, ...any[]]>;
+  let csLogMock: jest.SpyInstance<void, any[]>;
+  let csErrMock: jest.SpyInstance<void, any[]>;
   let proExitMock: jest.SpyInstance<never, [number?]>;
   beforeEach(() => {
     csLogMock = jest.spyOn(console, "log").mockImplementation(() => true);
