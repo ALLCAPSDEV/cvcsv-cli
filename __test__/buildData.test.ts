@@ -23,7 +23,7 @@ describe("buildData", () => {
       bucketName: "foo",
       rootDirectory: "foo",
       productCategory: "packagedgoods-v1",
-      productSet: "test"
+      productSet: "test",
     };
   });
   afterAll(() => {
@@ -38,7 +38,7 @@ describe("buildData", () => {
         "product-id": "TESTING",
         "product-display-name": "Testing",
         "product-category": "packagedgoods-v1",
-        "product-set-id": "test"
+        "product-set-id": "test",
       },
       {
         "image-uri": "gs://foo/images/another_dir/2.png",
@@ -46,10 +46,11 @@ describe("buildData", () => {
         "product-id": "ANOTHERDIR",
         "product-display-name": "Another Dir",
         "product-category": "packagedgoods-v1",
-        "product-set-id": "test"
-      }
+        "product-set-id": "test",
+      },
     ];
     const result = await subject["buildData"]();
+    console.log(result);
     expect(result).toEqual(expected);
   });
 });
