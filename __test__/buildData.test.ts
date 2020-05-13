@@ -2,19 +2,30 @@ import { CVCSVCLI } from "../src/cvcsvcli";
 import * as readline from "readline";
 describe("buildData", () => {
   let subject: CVCSVCLI;
-  let mockStdoutClearLine: jest.SpyInstance<
-    boolean,
-    [NodeJS.WritableStream, readline.Direction, (() => void)?]
-  >;
+  let mockStdoutClearLine: { (): typeof jest; mockRestore?: any };
   let mockStdoutWrite: jest.SpyInstance<
     boolean,
-    [string | Uint8Array, string?, ((err?: Error) => void)?]
+    [
+      string | Uint8Array,
+      (
+        | "ascii"
+        | "utf8"
+        | "utf-8"
+        | "utf16le"
+        | "ucs2"
+        | "ucs-2"
+        | "base64"
+        | "latin1"
+        | "binary"
+        | "hex"
+        | undefined
+      )?,
+      (((err?: Error | undefined) => void) | undefined)?
+    ]
   >;
 
   beforeAll(() => {
-    mockStdoutClearLine = jest
-      .spyOn(readline, "clearLine")
-      .mockImplementation(() => true);
+    mockStdoutClearLine = jest.mock("readline").autoMockOn;
     mockStdoutWrite = jest
       .spyOn(process.stdout, "write")
       .mockImplementation(() => true);
@@ -50,7 +61,6 @@ describe("buildData", () => {
       },
     ];
     const result = await subject["buildData"]();
-    console.log(result);
     expect(result).toEqual(expected);
   });
 });
