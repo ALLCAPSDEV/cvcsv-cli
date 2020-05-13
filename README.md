@@ -74,5 +74,5 @@ If no file is there then you will get the full set of questions.
 
 ## TODO
 
-- Add to my personal Homebrew tap to make updates/upgrades easier to manage.
+- Add to the [org](https://github.com/ALLCAPSDEV) Homebrew tap to make updates/upgrades easier to manage.
 - Confirmation screen.
