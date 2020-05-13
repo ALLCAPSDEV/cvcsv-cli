@@ -6,10 +6,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.1.25](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.22...v1.1.25) (2020-05-12)
 
-
 ### Bug Fixes
 
-* **release script:** fix error in release script ([#278](https://github.com/allcapsdev/cvcsv-cli/issues/278)) ([e6097b3](https://github.com/allcapsdev/cvcsv-cli/commit/e6097b34d08615f609b10877b72e97506b9579c3))
+- **release script:** fix error in release script ([#278](https://github.com/allcapsdev/cvcsv-cli/issues/278)) ([e6097b3](https://github.com/allcapsdev/cvcsv-cli/commit/e6097b34d08615f609b10877b72e97506b9579c3))
 
 ### [1.1.24](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.22...v1.1.24) (2020-05-11)
 
