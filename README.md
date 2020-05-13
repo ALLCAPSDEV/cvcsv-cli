@@ -1,6 +1,7 @@
 # cvcsv-cli
 
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ALLCAPSDEV/cvcsv-cli.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ALLCAPSDEV/cvcsv-cli/context:javascript) [![Maintainability](https://api.codeclimate.com/v1/badges/eb16470ddd4349898ad9/maintainability)](https://codeclimate.com/github/ALLCAPSDEV/cvcsv-cli/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/eb16470ddd4349898ad9/test_coverage)](https://codeclimate.com/github/ALLCAPSDEV/cvcsv-cli/test_coverage)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FALLCAPSDEV%2Fcvcsv-cli.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FALLCAPSDEV%2Fcvcsv-cli?ref=badge_shield)
 
 [![npm](https://img.shields.io/npm/dm/@allcapsdev/cvcsv-cli)](https://www.npmjs.com/package/@allcapsdev/cvcsv-cli) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
@@ -76,3 +77,7 @@ If no file is there then you will get the full set of questions.
 
 - Add to my personal Homebrew tap to make updates/upgrades easier to manage.
 - Confirmation screen.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FALLCAPSDEV%2Fcvcsv-cli.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FALLCAPSDEV%2Fcvcsv-cli?ref=badge_large)
