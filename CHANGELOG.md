@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.27](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.26...v1.1.27) (2020-05-14)
+
+
+### Bug Fixes
+
+* **final test issue:** one more type based error in the jest mocks ([c4c1ba4](https://github.com/allcapsdev/cvcsv-cli/commit/c4c1ba41db46c3eacf9cda7abdf46dcf95b29918))
+* **test fails:** fixing test fails ([c0f4dc1](https://github.com/allcapsdev/cvcsv-cli/commit/c0f4dc1d123a899aaf5b9a6488c3a42686e4316a))
+
 ### [1.1.26](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.25...v1.1.26) (2020-05-13)
 
 ### [1.1.25](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.22...v1.1.25) (2020-05-12)
