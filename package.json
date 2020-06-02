@@ -57,7 +57,7 @@
     "@rollup/plugin-node-resolve": "8.0.0",
     "@types/figlet": "1.2.0",
     "@types/jest": "25.2.3",
-    "@types/node": "14.0.6",
+    "@types/node": "14.0.9",
     "@types/prompts": "2.0.8",
     "babel-loader": "8.1.0",
     "commitizen": "4.1.2",
@@ -81,7 +81,7 @@
   "dependencies": {
     "csv-writer": "1.6.0",
     "figlet": "1.4.0",
-    "globby": "11.0.0",
+    "globby": "11.0.1",
     "kleur": "3.0.3",
     "prompts": "2.3.2"
   },
