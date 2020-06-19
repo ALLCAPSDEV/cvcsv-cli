@@ -67,7 +67,7 @@
     "prettier": "2.0.5",
     "pretty-quick": "2.0.1",
     "rimraf": "3.0.2",
-    "rollup": "2.17.0",
+    "rollup": "2.17.1",
     "rollup-plugin-size-snapshot": "0.12.0",
     "rollup-plugin-terser": "6.1.0",
     "rollup-plugin-typescript2": "0.27.1",
@@ -82,7 +82,7 @@
     "csv-writer": "1.6.0",
     "figlet": "1.4.0",
     "globby": "11.0.1",
-    "kleur": "4.0.0",
+    "kleur": "4.0.1",
     "prompts": "2.3.2"
   },
   "config": {
