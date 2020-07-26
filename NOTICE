@@ -1,4 +1,4 @@
-** fastq; version 1.7.0 -- https://github.com/mcollina/fastq#readme
+** fastq; version 1.8.0 -- https://github.com/mcollina/fastq#readme
 
 Copyright (c) 2015-2020, Matteo Collina <matteo.collina@gmail.com>
 
@@ -451,7 +451,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ** array-union; version 2.1.0 -- https://github.com/sindresorhus/array-union#readme
 (c) Sindre Sorhus (https://sindresorhus.com)
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-** globby; version 11.0.0 -- https://github.com/sindresorhus/globby#readme
+** globby; version 11.0.1 -- https://github.com/sindresorhus/globby#readme
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 ** path-type; version 4.0.0 -- https://github.com/sindresorhus/path-type#readme
 (c) Sindre Sorhus (https://sindresorhus.com)
