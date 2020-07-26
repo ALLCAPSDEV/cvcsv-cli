@@ -4,6 +4,8 @@
 
 [![npm](https://img.shields.io/npm/dm/@allcapsdev/cvcsv-cli)](https://www.npmjs.com/package/@allcapsdev/cvcsv-cli) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FALLCAPSDEV%2Fcvcsv-cli.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FALLCAPSDEV%2Fcvcsv-cli?ref=badge_shield)
 
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K81EODH)
+
 This is a tool to make the process of creating the bulk import CSV file for [Google Clouds Vision Product Search API](https://cloud.google.com/vision/product-search/docs/) a little easier.
 
 [Here](https://cloud.google.com/vision/product-search/docs/csv-format) is the documentation for the formatting the CSV.

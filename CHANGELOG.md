@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.52](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.51...v1.1.52) (2020-07-20)
+
+### [1.1.51](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.50...v1.1.51) (2020-07-13)
+
+### [1.1.50](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.49...v1.1.50) (2020-07-06)
+
+### [1.1.49](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.48...v1.1.49) (2020-06-29)
+
+### [1.1.48](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.47...v1.1.48) (2020-06-29)
+
+### [1.1.47](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.46...v1.1.47) (2020-06-25)
+
+### [1.1.46](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.45...v1.1.46) (2020-06-23)
+
+### [1.1.45](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.44...v1.1.45) (2020-06-22)
+
+### [1.1.44](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.43...v1.1.44) (2020-06-19)
+
+### [1.1.43](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.42...v1.1.43) (2020-06-16)
+
+### [1.1.42](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.41...v1.1.42) (2020-06-10)
+
+### [1.1.41](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.40...v1.1.41) (2020-06-09)
+
+### [1.1.40](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.39...v1.1.40) (2020-06-08)
+
+### [1.1.39](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.38...v1.1.39) (2020-06-05)
+
+### [1.1.38](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.37...v1.1.38) (2020-06-04)
+
+### [1.1.37](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.36...v1.1.37) (2020-06-03)
+
 ### [1.1.36](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.35...v1.1.36) (2020-06-01)
 
 ### [1.1.35](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.34...v1.1.35) (2020-05-29)
