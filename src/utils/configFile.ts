@@ -1,12 +1,13 @@
 import * as fs from "fs";
 import path from "path";
 import {
+  categoryQuestion,
   directoryQuestion,
   filenameQuestion,
   fileLocationQuestion,
   bucketQuestion,
   productCategoryQuestion,
-  productSetQuestion
+  productSetQuestion,
 } from "../questions";
 import { ConfigObj } from "../interfaces/ConfigObj";
 import prompts from "prompts";
@@ -15,11 +16,12 @@ import { PromptObject } from "prompts";
 export class Config {
   private static configKeys = [
     "bucketName",
+    "categoryConfirm",
     "csvFileLocation",
     "csvFilename",
     "productCategory",
     "productSet",
-    "rootDirectory"
+    "rootDirectory",
   ];
 
   public static configQuestions: {
@@ -30,7 +32,8 @@ export class Config {
     csvFilename: filenameQuestion,
     productCategory: productCategoryQuestion,
     productSet: productSetQuestion,
-    rootDirectory: directoryQuestion
+    rootDirectory: directoryQuestion,
+    categoryConfirm: categoryQuestion,
   };
 
   public static async readFile(): Promise<any> {
@@ -53,8 +56,8 @@ export class Config {
   ): Promise<ConfigObj> {
     const keys = Object.keys(objToCheck);
     const missing = [this.configKeys, keys]
-      .reduce((a, b) => a.filter(c => !b.includes(c)))
-      .map(val => this.configQuestions[val]);
+      .reduce((a, b) => a.filter((c) => !b.includes(c)))
+      .map((val) => this.configQuestions[val]);
 
     if (missing.length === 0) {
       return await Promise.resolve(objToCheck as ConfigObj);

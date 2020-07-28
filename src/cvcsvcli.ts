@@ -5,6 +5,7 @@ import path from "path";
 import { createObjectCsvWriter } from "csv-writer";
 import { readFiles } from "./utils/readFiles";
 import { CsvData } from "./interfaces/CsvData";
+import { labelCreator } from "./utils/labelCreator";
 
 export class CVCSVCLI {
   private static config: any;
@@ -32,8 +33,13 @@ export class CVCSVCLI {
     this.config = config;
   }
 
-  private static formatDirectory(dir: string) {
-    return dir.match(/\/$/) ? dir : `${dir}/`;
+  /**
+   * Ensures that the directory has a trailing slash
+   * @param path The path that requires formatting
+   */
+
+  private static formatDirectory(path: string) {
+    return path.match(/\/$/) ? path : `${path}/`;
   }
 
   private static formatRootDir(rootDirectory: string) {
@@ -48,29 +54,29 @@ export class CVCSVCLI {
       bucketName,
       rootDirectory,
       productCategory,
-      productSet
+      productSet,
     } = this.config;
     const paths = await readFiles(rootDirectory);
     if (paths.length < 1) throw Error("No images");
     const fileData: CsvData[] = [];
-    paths.forEach(str => {
+    paths.forEach((str: string) => {
       const fileName = path.basename(str);
       const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
       const displayName = gsPath
         .replace(/\/|_/g, " ")
         .replace(fileName, "")
-        .replace(/\w+/g, word => {
+        .replace(/\w+/g, (word) => {
           return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
         })
         .trim();
       const productId = displayName.replace(/\s/g, "").toUpperCase();
       const bucketUri = `gs://${bucketName}/images/${gsPath}`;
-      const labels = gsPath
-        .replace(fileName, "")
-        .split(/\//)
-        .filter(word => word !== "")
-        .map(word => `tag=${word}`)
-        .toString();
+      const labels = labelCreator(
+        gsPath
+          .replace(fileName, "")
+          .split(/\//)
+          .filter((word) => word !== "")
+      );
 
       fileData.push({
         "image-uri": bucketUri,
@@ -78,7 +84,7 @@ export class CVCSVCLI {
         "product-display-name": displayName,
         "product-category": productCategory,
         "product-set-id": productSet,
-        labels
+        labels,
       });
     });
 
@@ -100,8 +106,8 @@ export class CVCSVCLI {
         "product-category",
         "product-display-name",
         "labels",
-        "bounding-poly"
-      ]
+        "bounding-poly",
+      ],
     });
 
     try {
