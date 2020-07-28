@@ -1,5 +1,4 @@
 import { blue } from "kleur";
-import fs from "fs";
 import { PromptObject } from "prompts";
 
 const categoryQuestion: PromptObject = {
