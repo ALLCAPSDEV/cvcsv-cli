@@ -25,6 +25,7 @@
     "tscov": "tscov",
     "tscov:d": "tscov --details",
     "test": "jest",
+    "watch": "jest --watch",
     "typedoc": "typedoc --out docs ./src",
     "prepare": "npm run build",
     "prettier": "prettier --parser typescript --write \"src/**/*.ts\"",
