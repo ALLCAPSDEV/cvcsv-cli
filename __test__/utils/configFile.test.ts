@@ -92,6 +92,7 @@ describe("Config", () => {
         await Config.completeConfig(objToCheck);
         delete questions[val];
         const expected = Object.values(questions);
+
         expect(prompts).toBeCalledWith(expected);
       });
       test("prompts is only called once", async () => {

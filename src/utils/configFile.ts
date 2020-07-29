@@ -16,7 +16,7 @@ import { PromptObject } from "prompts";
 export class Config {
   private static configKeys = [
     "bucketName",
-    "categoryConfirm",
+    "category",
     "csvFileLocation",
     "csvFilename",
     "productCategory",
@@ -28,12 +28,12 @@ export class Config {
     [index: string]: PromptObject<string>;
   } = {
     bucketName: bucketQuestion,
+    category: categoryQuestion,
     csvFileLocation: fileLocationQuestion,
     csvFilename: filenameQuestion,
     productCategory: productCategoryQuestion,
     productSet: productSetQuestion,
     rootDirectory: directoryQuestion,
-    categoryConfirm: categoryQuestion,
   };
 
   public static async readFile(): Promise<any> {
