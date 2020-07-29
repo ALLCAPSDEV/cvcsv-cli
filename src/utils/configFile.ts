@@ -27,14 +27,15 @@ export class Config {
   public static configQuestions: {
     [index: string]: PromptObject<string>;
   } = {
-    bucketName: bucketQuestion,
-    category: categoryQuestion,
-    csvFileLocation: fileLocationQuestion,
-    csvFilename: filenameQuestion,
-    productCategory: productCategoryQuestion,
-    productSet: productSetQuestion,
-    rootDirectory: directoryQuestion,
-  };
+      bucketName: bucketQuestion,
+      category: categoryQuestion[0],
+      categoryNum: categoryQuestion[1],
+      csvFileLocation: fileLocationQuestion,
+      csvFilename: filenameQuestion,
+      productCategory: productCategoryQuestion,
+      productSet: productSetQuestion,
+      rootDirectory: directoryQuestion,
+    };
 
   public static async readFile(): Promise<any> {
     const fileName = ".cvcsvrc";

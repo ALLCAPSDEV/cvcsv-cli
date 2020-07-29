@@ -75,7 +75,8 @@ export class CVCSVCLI {
         gsPath
           .replace(fileName, "")
           .split(/\//)
-          .filter((word) => word !== "")
+          .filter((word) => word !== ""),
+        this.config.category
       );
 
       fileData.push({

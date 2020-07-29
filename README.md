@@ -62,6 +62,7 @@ The file should be named `.cvcsvrc` and the structure is as follows:
 ```json
 {
   "bucketName": "the-name-of-the-gs-bucket-the-sample-images-are-stored",
+  "category": false,
   "csvFileLocation": "where-you-would-like-to-save-the-csv-file",
   "csvFilename": "the-name-of-the-file.csv",
   "productCategory": "any-of-the-product-categories-GCP-CV-has",
@@ -71,6 +72,8 @@ The file should be named `.cvcsvrc` and the structure is as follows:
 ```
 
 You can complete the whole file or you can miss any of the fields out, the CLI will ask you for any that are missing.
+
+`category` can be `false` or a number. The number relates to the directories below the root directory. Using the example above `kitkat` would be `0`, `chunky` = `1`, etc.
 
 If no file is there then you will get the full set of questions.
 
