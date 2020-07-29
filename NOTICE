@@ -155,7 +155,15 @@ THE SOFTWARE.
 
 ------
 
-** figlet; version 1.4.0 -- https://github.com/patorjk/figlet.js#readme
+** figlet; version 1.5.0 -- https://github.com/patorjk/figlet.js#readme
+(c) COPYRIGHTS MMIV
+(c) Michel Eftimakis 1995
+Copyright (c) 2000 Michael Hamm.
+copyright 1993, RSA Laboratories
+(c) 1994 by Victor Parada (vparada@inf.utfsm.cl)
+Copyright 1996, 1997 by John Cowan and Paul Burton
+Portions Copyright 1991, 1993, 1994 by Glenn Chappell and Ian Chai
+Copyright (c) 2014-present Patrick Gillespie and other contributors
 
 The MIT License (MIT)
 
@@ -362,6 +370,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ------
 
+** kleur; version 4.0.2 -- https://github.com/lukeed/kleur#readme
+(c) Luke Edwards (https://lukeed.com)
+Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
 ** kleur; version 3.0.3 -- https://github.com/lukeed/kleur#readme
 (c) Luke Edwards (https://lukeed.com)
 Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
