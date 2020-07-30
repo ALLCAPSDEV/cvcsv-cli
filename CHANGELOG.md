@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.53...v2.0.0) (2020-07-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* **category label:** .cvcsvrc files will need to be updated to include the category field if the process
+is intended to be executed without human interaction.
+
+### Features
+
+* **category label:** adds the option to use a category instead of a tag ([f20dd8c](https://github.com/allcapsdev/cvcsv-cli/commit/f20dd8c8881bdc7b3786bc8f809e2c46d92674fc)), closes [#390](https://github.com/allcapsdev/cvcsv-cli/issues/390)
+
 ### [1.1.53](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.52...v1.1.53) (2020-07-27)
 
 ### [1.1.52](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.51...v1.1.52) (2020-07-20)

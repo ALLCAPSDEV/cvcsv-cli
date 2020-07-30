@@ -72,6 +72,7 @@ describe("Config", () => {
     beforeEach(() => {
       promptMock = jest.spyOn(prompts, "prompt");
       questions = Object.assign({}, Config.configQuestions);
+      delete questions["categoryNum"];
     });
     afterEach(() => {
       promptMock.mockRestore();
@@ -86,12 +87,14 @@ describe("Config", () => {
       expect(result).toEqual(objToCheck);
     });
     Object.keys(Config.configQuestions).forEach((val) => {
+      if (val === "categoryNum") return;
       test(`asks the remaining questions when only ${val} is in the config file`, async () => {
         objToCheck = {};
         objToCheck[val] = "test-value";
         await Config.completeConfig(objToCheck);
         delete questions[val];
         const expected = Object.values(questions);
+
         expect(prompts).toBeCalledWith(expected);
       });
       test("prompts is only called once", async () => {
