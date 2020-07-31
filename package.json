@@ -57,7 +57,7 @@
     "@liftr/tscov": "1.4.7",
     "@rollup/plugin-node-resolve": "8.4.0",
     "@types/figlet": "1.2.0",
-    "@types/jest": "26.0.7",
+    "@types/jest": "26.0.8",
     "@types/node": "14.0.27",
     "@types/prompts": "2.0.8",
     "babel-loader": "8.1.0",
