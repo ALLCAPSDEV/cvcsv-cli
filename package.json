@@ -1,6 +1,6 @@
 {
   "name": "@allcapsdev/cvcsv-cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "CLI for creating CSV for Cloud Vision Product Search API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -51,13 +51,13 @@
   "homepage": "https://github.com/allcapsdev/cvcsv-cli#readme",
   "devDependencies": {
     "@arkweid/lefthook": "0.7.2",
-    "@babel/core": "7.10.5",
+    "@babel/core": "7.11.0",
     "@commitlint/cli": "9.1.1",
     "@commitlint/config-conventional": "9.1.1",
     "@liftr/tscov": "1.4.7",
     "@rollup/plugin-node-resolve": "8.4.0",
     "@types/figlet": "1.2.0",
-    "@types/jest": "26.0.7",
+    "@types/jest": "26.0.8",
     "@types/node": "14.0.27",
     "@types/prompts": "2.0.8",
     "babel-loader": "8.1.0",
@@ -74,7 +74,7 @@
     "rollup-plugin-typescript2": "0.27.1",
     "standard-version": "8.0.2",
     "ts-jest": "25.5.1",
-    "ts-loader": "8.0.1",
+    "ts-loader": "8.0.2",
     "ts-node": "8.10.2",
     "typedoc": "0.17.8",
     "typescript": "3.9.7"
@@ -83,7 +83,7 @@
     "csv-writer": "1.6.0",
     "figlet": "1.5.0",
     "globby": "11.0.1",
-    "kleur": "4.0.2",
+    "kleur": "4.0.3",
     "prompts": "2.3.2"
   },
   "config": {
