@@ -76,8 +76,3 @@ You can complete the whole file or you can miss any of the fields out, the CLI w
 `category` can be `false` or a number. The number relates to the directories below the root directory. Using the example above `kitkat` would be `0`, `chunky` = `1`, etc.
 
 If no file is there then you will get the full set of questions.
-
-## TODO
-
-- Add to the [org](https://github.com/ALLCAPSDEV) Homebrew tap to make updates/upgrades easier to manage.
-- Confirmation screen.
