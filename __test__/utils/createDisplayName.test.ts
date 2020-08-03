@@ -1,10 +1,6 @@
 import { createDisplayName } from "../../src/utils/createDisplayName";
 describe("createDisplayName", () => {
-  let path: string,
-    fileName: string,
-    catNum: number | boolean,
-    result: string,
-    expected: string;
+  let path: string, fileName: string, result: string, expected: string;
   let subject: (
     path: string,
     fileName: string,
