@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.1...v2.0.2) (2020-08-03)
+
+
+### Bug Fixes
+
+* **displayname:** fixes the category being included in displayname ([30df7d7](https://github.com/allcapsdev/cvcsv-cli/commit/30df7d73d1209024801f0d4621f96b748e804ae4)), closes [#401](https://github.com/allcapsdev/cvcsv-cli/issues/401)
+
 ### [2.0.1](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.0...v2.0.1) (2020-08-03)
 
 ## [2.0.0](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.53...v2.0.0) (2020-07-29)
