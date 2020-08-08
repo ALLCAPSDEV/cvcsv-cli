@@ -6,6 +6,7 @@ import { createObjectCsvWriter } from "csv-writer";
 import { readFiles } from "./utils/readFiles";
 import { CsvData } from "./interfaces/CsvData";
 import { labelCreator } from "./utils/labelCreator";
+import { createDisplayName } from "./utils/createDisplayName";
 
 export class CVCSVCLI {
   private static config: any;
@@ -52,6 +53,7 @@ export class CVCSVCLI {
   private static async buildData() {
     const {
       bucketName,
+      categoryNum,
       rootDirectory,
       productCategory,
       productSet,
@@ -62,13 +64,7 @@ export class CVCSVCLI {
     paths.forEach((str: string) => {
       const fileName = path.basename(str);
       const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
-      const displayName = gsPath
-        .replace(/\/|_/g, " ")
-        .replace(fileName, "")
-        .replace(/\w+/g, (word) => {
-          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-        })
-        .trim();
+      const displayName = createDisplayName(gsPath, fileName, categoryNum);
       const productId = displayName.replace(/\s/g, "").toUpperCase();
       const bucketUri = `gs://${bucketName}/images/${gsPath}`;
       const labels = labelCreator(
