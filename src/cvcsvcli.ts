@@ -31,6 +31,7 @@ export class CVCSVCLI {
     }
     config.rootDirectory = this.formatDirectory(config.rootDirectory);
     config.csvFileLocation = this.formatDirectory(config.csvFileLocation);
+    console.log(config);
     this.config = config;
   }
 
@@ -72,7 +73,7 @@ export class CVCSVCLI {
           .replace(fileName, "")
           .split(/\//)
           .filter((word) => word !== ""),
-        this.config.category
+        this.config
       );
 
       fileData.push({
