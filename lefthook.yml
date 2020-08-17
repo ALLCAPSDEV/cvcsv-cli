@@ -1,7 +1,7 @@
 commit-msg:
   commands:
     commitLint:
-      run: npm run commitlint
+      run: npm run commitlint -- -e ./.git/COMMIT_EDITMSG
 pre-commit:
   commands:
     pretty-quick:
