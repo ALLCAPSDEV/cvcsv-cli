@@ -19,6 +19,7 @@ export class Config {
     "category",
     "csvFileLocation",
     "csvFilename",
+    "labels",
     "productCategory",
     "productSet",
     "rootDirectory",
@@ -56,9 +57,11 @@ export class Config {
     objToCheck: Partial<ConfigObj>
   ): Promise<ConfigObj> {
     const keys = Object.keys(objToCheck);
-    const missing = [this.configKeys, keys]
+    const missing = [this.configKeys.filter((val) => val !== "labels"), keys]
       .reduce((a, b) => a.filter((c) => !b.includes(c)))
-      .map((val) => this.configQuestions[val]);
+      .map((val) => {
+        return this.configQuestions[val];
+      });
 
     if (missing.length === 0) {
       return await Promise.resolve(objToCheck as ConfigObj);
