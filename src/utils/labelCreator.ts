@@ -11,7 +11,7 @@ export const labelCreator = (words: string[], config: ConfigFileObj) => {
       const labels = config.labels as ConfigFileLabels;
       const value = labels[key];
       if (typeof value === "number") {
-        if (LabelsKeys.includes("defaults")) defaults.push(value);
+        if (config?.labels?.defaults) defaults.push(value);
         prev.push(`${key}=${words[value]}`);
       }
       if (typeof value === "string") prev.push(`${key}=${value}`);

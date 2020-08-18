@@ -55,4 +55,35 @@ describe("labelCreator", () => {
       expect(result).toStrictEqual(expected);
     });
   });
+  describe("when passed a string array and labels", () => {
+    beforeEach(() => {
+      words = ["test", "word", "array"];
+      config = {
+        category: false,
+        labels: {
+          category: 0,
+          foo: 1,
+          bar: "foobar",
+          defaults: true,
+        },
+      };
+    });
+    test("returns the labels", () => {
+      expected = "category=test,foo=word,bar=foobar,tag=array";
+      result = subject(words, config);
+      expect(result).toStrictEqual(expected);
+    });
+    test("no `tags` appear when `defaults` is false", () => {
+      expected = "category=test,foo=word,bar=foobar";
+      if (typeof config.labels !== "undefined") config.labels.defaults = false;
+      result = subject(words, config);
+      expect(result).toStrictEqual(expected);
+    });
+    test("no `tags` appear when `defaults` is undefined", () => {
+      expected = "category=test,foo=word,bar=foobar";
+      if (typeof config.labels !== "undefined") delete config.labels.defaults;
+      result = subject(words, config);
+      expect(result).toStrictEqual(expected);
+    });
+  });
 });
