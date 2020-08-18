@@ -27,6 +27,9 @@ export class CVCSVCLI {
     if (configFile === null) {
       config = await prompts(Object.values(Config.configQuestions));
     } else {
+      if (Object.keys(configFile).includes("labels")) {
+        configFile.category = false;
+      }
       config = await Config.completeConfig(configFile);
     }
     config.rootDirectory = this.formatDirectory(config.rootDirectory);
@@ -72,7 +75,7 @@ export class CVCSVCLI {
           .replace(fileName, "")
           .split(/\//)
           .filter((word) => word !== ""),
-        this.config.category
+        this.config
       );
 
       fileData.push({
