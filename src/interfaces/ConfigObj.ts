@@ -13,10 +13,12 @@ export interface ConfigFileObj {
   category?: boolean | number;
   csvFileLocation?: string;
   csvFilename?: string;
-  labels?: {
-    [key: string]: string | number | boolean;
-  };
+  labels?: ConfigFileLabels;
   productCategory?: string;
   productSet?: string;
   rootDirectory?: string;
+}
+
+export interface ConfigFileLabels {
+  [key: string]: string | number | boolean;
 }
