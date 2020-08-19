@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.4...v2.1.0) (2020-08-19)
+
+
+### Features
+
+* **labels:** custom labels are possible ([bc034bf](https://github.com/allcapsdev/cvcsv-cli/commit/bc034bf09b2d8528973e040683dca13d0aa8739f)), closes [#424](https://github.com/allcapsdev/cvcsv-cli/issues/424)
+
+
+### Bug Fixes
+
+* **lefthook:** fixed commitlint ([67838b1](https://github.com/allcapsdev/cvcsv-cli/commit/67838b1231c0ea02244e41953e9746c4f852d3a6))
+
 ### [2.0.4](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.3...v2.0.4) (2020-08-17)
 
 ### [2.0.3](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.2...v2.0.3) (2020-08-10)
