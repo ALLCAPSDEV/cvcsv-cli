@@ -13,8 +13,8 @@ const positiveData: CsvData[] = [
     "product-category": "test category",
     "product-display-name": "foobar",
     labels: "category='test',category='foo'",
-    "bounding-poly": "100,150,450,150,450,550,100,550"
-  }
+    "bounding-poly": "100,150,450,150,450,550,100,550",
+  },
 ];
 
 const filePath = path.join(__dirname, "test.csv");
@@ -26,7 +26,7 @@ describe("writeToFile", () => {
     subject = CVCSVCLI;
     subject["config"] = {
       csvFileLocation: "__test__",
-      csvFilename: "test.csv"
+      csvFilename: "test.csv",
     };
     subject["data"] = positiveData;
   });

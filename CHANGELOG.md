@@ -2,26 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [2.0.2](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.1...v2.0.2) (2020-08-03)
+### [2.0.4](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.3...v2.0.4) (2020-08-17)
 
+### [2.0.3](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.2...v2.0.3) (2020-08-10)
+
+### [2.0.2](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.1...v2.0.2) (2020-08-03)
 
 ### Bug Fixes
 
-* **displayname:** fixes the category being included in displayname ([30df7d7](https://github.com/allcapsdev/cvcsv-cli/commit/30df7d73d1209024801f0d4621f96b748e804ae4)), closes [#401](https://github.com/allcapsdev/cvcsv-cli/issues/401)
+- **displayname:** fixes the category being included in displayname ([30df7d7](https://github.com/allcapsdev/cvcsv-cli/commit/30df7d73d1209024801f0d4621f96b748e804ae4)), closes [#401](https://github.com/allcapsdev/cvcsv-cli/issues/401)
 
 ### [2.0.1](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.0...v2.0.1) (2020-08-03)
 
 ## [2.0.0](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.53...v2.0.0) (2020-07-29)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **category label:** .cvcsvrc files will need to be updated to include the category field if the process
-is intended to be executed without human interaction.
+- **category label:** .cvcsvrc files will need to be updated to include the category field if the process
+  is intended to be executed without human interaction.
 
 ### Features
 
-* **category label:** adds the option to use a category instead of a tag ([f20dd8c](https://github.com/allcapsdev/cvcsv-cli/commit/f20dd8c8881bdc7b3786bc8f809e2c46d92674fc)), closes [#390](https://github.com/allcapsdev/cvcsv-cli/issues/390)
+- **category label:** adds the option to use a category instead of a tag ([f20dd8c](https://github.com/allcapsdev/cvcsv-cli/commit/f20dd8c8881bdc7b3786bc8f809e2c46d92674fc)), closes [#390](https://github.com/allcapsdev/cvcsv-cli/issues/390)
 
 ### [1.1.53](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.52...v1.1.53) (2020-07-27)
 
@@ -77,11 +79,10 @@ is intended to be executed without human interaction.
 
 ### [1.1.27](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.26...v1.1.27) (2020-05-14)
 
-
 ### Bug Fixes
 
-* **final test issue:** one more type based error in the jest mocks ([c4c1ba4](https://github.com/allcapsdev/cvcsv-cli/commit/c4c1ba41db46c3eacf9cda7abdf46dcf95b29918))
-* **test fails:** fixing test fails ([c0f4dc1](https://github.com/allcapsdev/cvcsv-cli/commit/c0f4dc1d123a899aaf5b9a6488c3a42686e4316a))
+- **final test issue:** one more type based error in the jest mocks ([c4c1ba4](https://github.com/allcapsdev/cvcsv-cli/commit/c4c1ba41db46c3eacf9cda7abdf46dcf95b29918))
+- **test fails:** fixing test fails ([c0f4dc1](https://github.com/allcapsdev/cvcsv-cli/commit/c0f4dc1d123a899aaf5b9a6488c3a42686e4316a))
 
 ### [1.1.26](https://github.com/allcapsdev/cvcsv-cli/compare/v1.1.25...v1.1.26) (2020-05-13)
 
