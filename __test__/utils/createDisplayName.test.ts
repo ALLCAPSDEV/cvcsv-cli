@@ -1,5 +1,8 @@
 import { createDisplayName } from "../../src/utils/createDisplayName";
-import { ConfigFileObj, ConfigFileLabels } from "../../src/interfaces/ConfigObj";
+import {
+  ConfigFileObj,
+  ConfigFileLabels,
+} from "../../src/interfaces/ConfigObj";
 describe("createDisplayName", () => {
   let path: string, fileName: string, result: string, expected: string;
   let subject: (
@@ -37,19 +40,19 @@ describe("createDisplayName", () => {
         expected = "Some Path With A Category In";
         expect(result).toEqual(expected);
       });
-    })
+    });
     describe("with labels", () => {
-      let labels: ConfigFileLabels
+      let labels: ConfigFileLabels;
       test("removes labels from the display name", () => {
         labels = {
           some: 0,
           test: 1,
-          labels: 2
-        }
-        result = subject(path, fileName, { labels })
-        expected = "A Category In"
-        expect(result).toEqual(expected)
-      })
-    })
+          labels: 2,
+        };
+        result = subject(path, fileName, { labels });
+        expected = "A Category In";
+        expect(result).toEqual(expected);
+      });
+    });
   });
 });
