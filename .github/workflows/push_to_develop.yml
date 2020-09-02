@@ -44,8 +44,14 @@ jobs:
     needs: coverage
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci --silent
       - name: Run release script
-        run: ./scripts/beta-release.sh
+        run: npm run release -- --prerelease beta
+      - name: Publish release
+        run: npm publish --access public --tag beta
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
