@@ -38,3 +38,28 @@ jobs:
           CC_TEST_REPORTER_ID: ${{secrets.CC_REPORTER_ID}}
         with:
           coverageCommand: npm run test
+  build-release:
+    name: Create a release
+    runs-on: ubuntu-latest
+    needs: coverage
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run release script
+        run: ./scripts/beta-release.sh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  publish-npm:
+    needs: build-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
+      - run: git checkout master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish --access public --tag beta
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
