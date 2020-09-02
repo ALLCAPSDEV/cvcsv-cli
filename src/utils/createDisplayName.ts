@@ -1,11 +1,13 @@
+import { ConfigFileObj } from "../interfaces/ConfigObj";
+
 export const createDisplayName = (
   path: string,
   fileName: string,
-  catNum: number | boolean
+  config: ConfigFileObj
 ) => {
-  if (catNum) {
+  if (typeof config.category === "number") {
     const newPath = path.split("/");
-    newPath.splice(catNum as number, 1);
+    newPath.splice(config.category as number, 1);
     path = newPath.join("/");
   }
 

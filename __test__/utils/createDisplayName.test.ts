@@ -1,10 +1,11 @@
 import { createDisplayName } from "../../src/utils/createDisplayName";
+import { ConfigFileObj } from "../../src/interfaces/ConfigObj";
 describe("createDisplayName", () => {
   let path: string, fileName: string, result: string, expected: string;
   let subject: (
     path: string,
     fileName: string,
-    catNum: number | boolean
+    config: ConfigFileObj
   ) => string;
   beforeAll(() => {
     subject = createDisplayName;
@@ -16,7 +17,7 @@ describe("createDisplayName", () => {
     });
 
     test("when passed a category number it removes it from the display name", () => {
-      result = subject(path, fileName, 4);
+      result = subject(path, fileName, { category: 4 });
 
       expected = "Some Path With A In";
       expect(result).toEqual(expected);
@@ -30,7 +31,7 @@ describe("createDisplayName", () => {
     });
 
     test("when passed false as the category number nothing is removed from the display name", () => {
-      result = subject(path, fileName, false);
+      result = subject(path, fileName, { category: false });
 
       expected = "Some Path Without A Category In";
       expect(result).toEqual(expected);

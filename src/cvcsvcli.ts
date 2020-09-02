@@ -56,7 +56,6 @@ export class CVCSVCLI {
   private static async buildData() {
     const {
       bucketName,
-      categoryNum,
       rootDirectory,
       productCategory,
       productSet,
@@ -67,7 +66,7 @@ export class CVCSVCLI {
     paths.forEach((str: string) => {
       const fileName = path.basename(str);
       const gsPath = str.replace(this.formatRootDir(rootDirectory), "");
-      const displayName = createDisplayName(gsPath, fileName, categoryNum);
+      const displayName = createDisplayName(gsPath, fileName, this.config);
       const productId = displayName.replace(/\s/g, "").toUpperCase();
       const bucketUri = `gs://${bucketName}/images/${gsPath}`;
       const labels = labelCreator(
