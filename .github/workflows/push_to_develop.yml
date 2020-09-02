@@ -50,7 +50,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci --silent
       - name: Run release script
-        run: npm run release -- --prerelease beta
+        run: npm run release -- --skip.changelog --skip.tag --skip.commit -p beta
       - name: Publish release
         run: npm publish --access public --tag beta
         env:
