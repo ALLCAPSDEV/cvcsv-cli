@@ -14,7 +14,7 @@ export const createDisplayName = (
     const newPath = path.split("/");
     const labels = Object.entries(config.labels)
       .reduce<number[]>((acc, label) => {
-        if (typeof label[1] === "number") acc.push(label[1]);
+        if (typeof label[1] === "number" && label[0] !== "brand") acc.push(label[1]);
         return acc;
       }, [])
       .sort((a, b) => b - a);
