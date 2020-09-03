@@ -38,20 +38,4 @@ jobs:
           CC_TEST_REPORTER_ID: ${{secrets.CC_REPORTER_ID}}
         with:
           coverageCommand: npm run test
-  build-release:
-    name: Create a release
-    runs-on: ubuntu-latest
-    needs: coverage
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci --silent
-      - name: Run release script
-        run: npm run release -- --skip.changelog --skip.tag --skip.commit -p beta
-      - name: Publish release
-        run: npm publish --access public --tag beta
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
