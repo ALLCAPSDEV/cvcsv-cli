@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.2...v2.2.0) (2020-09-09)
+
+
+### Features
+
+* **display name:** removes labels from display name ([52d1a11](https://github.com/allcapsdev/cvcsv-cli/commit/52d1a11fc356393b5a7a40a9b743cc1add5c8063))
+* **display name:** removes labels from display name ([9879921](https://github.com/allcapsdev/cvcsv-cli/commit/98799216fd06469714289456d04b666b44f5f781))
+
+
+### Bug Fixes
+
+* **beta-release:** fixes bug ([e7785c9](https://github.com/allcapsdev/cvcsv-cli/commit/e7785c9e178ab6ac9fe8d76607597bdc6265abfe))
+* **fix the fix:** should now publish ([49c45ff](https://github.com/allcapsdev/cvcsv-cli/commit/49c45ff7abcb58ae528860479b4b1826c8a9b516))
+
 ## [2.2.0-beta.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.2...v2.2.0-beta.0) (2020-09-02)
 
 
