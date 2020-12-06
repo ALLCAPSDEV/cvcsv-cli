@@ -1,4 +1,4 @@
-name: Daily Release
+name: Weekly Release
 on:
   schedule:
     - cron: "00 10 * * 3"
@@ -59,7 +59,7 @@ jobs:
         with:
           source_branch: "master"
           destination_branch: "develop"
-          pr_title: "Daily Release"
+          pr_title: "Weekly Release"
           pr_body: ":tada: *An automated PR*"
           pr_label: "autorebase"
           pr_draft: false
