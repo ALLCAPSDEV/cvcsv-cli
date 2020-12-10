@@ -32,7 +32,7 @@ jobs:
       - name: run build if cache
         if: steps.npm-cache.outputs.cache-hit == 'true'
         run: npm run build
-      - uses: paambaati/codeclimate-action@v2.7.4
+      - uses: paambaati/codeclimate-action@v2.7.5
         name: Code Climate Coverage Action
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_REPORTER_ID}}
