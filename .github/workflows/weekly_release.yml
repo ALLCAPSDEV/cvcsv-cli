@@ -1,4 +1,4 @@
-name: Daily Release
+name: Weekly Release
 on:
   schedule:
     - cron: "00 10 * * 3"
@@ -7,7 +7,7 @@ jobs:
     name: Create a release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Run release script
         run: ./scripts/release.sh
         env:
@@ -17,10 +17,10 @@ jobs:
     needs: build-release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - run: git fetch --prune --unshallow
       - run: git checkout master
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2.1.5
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
@@ -33,10 +33,10 @@ jobs:
     needs: build-release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - run: git fetch --prune --unshallow
       - run: git checkout master
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2.1.5
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
@@ -51,7 +51,7 @@ jobs:
     needs: build-release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - run: git fetch --prune --unshallow
       - run: git checkout master
       - name: pull-request
@@ -59,7 +59,7 @@ jobs:
         with:
           source_branch: "master"
           destination_branch: "develop"
-          pr_title: "Daily Release"
+          pr_title: "Weekly Release"
           pr_body: ":tada: *An automated PR*"
           pr_label: "autorebase"
           pr_draft: false

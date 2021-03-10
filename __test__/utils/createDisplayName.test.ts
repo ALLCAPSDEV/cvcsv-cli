@@ -1,10 +1,14 @@
 import { createDisplayName } from "../../src/utils/createDisplayName";
+import {
+  ConfigFileObj,
+  ConfigFileLabels,
+} from "../../src/interfaces/ConfigObj";
 describe("createDisplayName", () => {
   let path: string, fileName: string, result: string, expected: string;
   let subject: (
     path: string,
     fileName: string,
-    catNum: number | boolean
+    config: ConfigFileObj
   ) => string;
   beforeAll(() => {
     subject = createDisplayName;
@@ -16,7 +20,7 @@ describe("createDisplayName", () => {
     });
 
     test("when passed a category number it removes it from the display name", () => {
-      result = subject(path, fileName, 4);
+      result = subject(path, fileName, { category: 4 });
 
       expected = "Some Path With A In";
       expect(result).toEqual(expected);
@@ -25,15 +29,30 @@ describe("createDisplayName", () => {
 
   describe("without category number", () => {
     beforeEach(() => {
-      path = "some/path/without/a/category/in/it.jpg";
+      path = "some/path/with/a/category/in/it.jpg";
       fileName = "it.jpg";
     });
 
-    test("when passed false as the category number nothing is removed from the display name", () => {
-      result = subject(path, fileName, false);
+    describe("without labels", () => {
+      test("when passed false as the category number nothing is removed from the display name", () => {
+        result = subject(path, fileName, { category: false });
 
-      expected = "Some Path Without A Category In";
-      expect(result).toEqual(expected);
+        expected = "Some Path With A Category In";
+        expect(result).toEqual(expected);
+      });
+    });
+    describe("with labels", () => {
+      let labels: ConfigFileLabels;
+      test("removes labels from the display name", () => {
+        labels = {
+          some: 0,
+          test: 1,
+          labels: 2,
+        };
+        result = subject(path, fileName, { labels });
+        expected = "A Category In";
+        expect(result).toEqual(expected);
+      });
     });
   });
 });

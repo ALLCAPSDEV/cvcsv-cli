@@ -2,6 +2,84 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.24](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.23...v2.2.24) (2021-03-03)
+
+### [2.2.23](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.22...v2.2.23) (2021-02-24)
+
+### [2.2.22](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.21...v2.2.22) (2021-02-17)
+
+### [2.2.21](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.20...v2.2.21) (2021-02-10)
+
+### [2.2.20](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.19...v2.2.20) (2021-02-03)
+
+### [2.2.19](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.18...v2.2.19) (2021-01-27)
+
+### [2.2.18](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.17...v2.2.18) (2021-01-20)
+
+### [2.2.17](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.16...v2.2.17) (2021-01-13)
+
+### [2.2.16](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.15...v2.2.16) (2021-01-06)
+
+### [2.2.15](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.14...v2.2.15) (2020-12-30)
+
+### [2.2.14](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.13...v2.2.14) (2020-12-23)
+
+### [2.2.13](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.12...v2.2.13) (2020-12-16)
+
+### [2.2.12](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.11...v2.2.12) (2020-12-09)
+
+### [2.2.11](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.10...v2.2.11) (2020-12-02)
+
+### [2.2.10](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.9...v2.2.10) (2020-11-25)
+
+### [2.2.9](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.8...v2.2.9) (2020-11-18)
+
+### [2.2.8](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.7...v2.2.8) (2020-11-11)
+
+### [2.2.7](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.6...v2.2.7) (2020-11-04)
+
+### [2.2.6](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.5...v2.2.6) (2020-10-28)
+
+### [2.2.5](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.4...v2.2.5) (2020-10-14)
+
+### [2.2.4](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.3...v2.2.4) (2020-10-07)
+
+### [2.2.3](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.2...v2.2.3) (2020-09-30)
+
+### [2.2.2](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.1...v2.2.2) (2020-09-23)
+
+### [2.2.1](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.0...v2.2.1) (2020-09-16)
+
+## [2.2.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.2...v2.2.0) (2020-09-09)
+
+
+### Features
+
+* **display name:** removes labels from display name ([52d1a11](https://github.com/allcapsdev/cvcsv-cli/commit/52d1a11fc356393b5a7a40a9b743cc1add5c8063))
+* **display name:** removes labels from display name ([9879921](https://github.com/allcapsdev/cvcsv-cli/commit/98799216fd06469714289456d04b666b44f5f781))
+
+
+### Bug Fixes
+
+* **beta-release:** fixes bug ([e7785c9](https://github.com/allcapsdev/cvcsv-cli/commit/e7785c9e178ab6ac9fe8d76607597bdc6265abfe))
+* **fix the fix:** should now publish ([49c45ff](https://github.com/allcapsdev/cvcsv-cli/commit/49c45ff7abcb58ae528860479b4b1826c8a9b516))
+
+## [2.2.0-beta.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.2...v2.2.0-beta.0) (2020-09-02)
+
+
+### Features
+
+* **display name:** removes labels from display name ([52d1a11](https://github.com/allcapsdev/cvcsv-cli/commit/52d1a11fc356393b5a7a40a9b743cc1add5c8063))
+* **display name:** removes labels from display name ([9879921](https://github.com/allcapsdev/cvcsv-cli/commit/98799216fd06469714289456d04b666b44f5f781))
+
+
+### Bug Fixes
+
+* **beta-release:** fixes bug ([e7785c9](https://github.com/allcapsdev/cvcsv-cli/commit/e7785c9e178ab6ac9fe8d76607597bdc6265abfe))
+* **fix the fix:** should now publish ([49c45ff](https://github.com/allcapsdev/cvcsv-cli/commit/49c45ff7abcb58ae528860479b4b1826c8a9b516))
+
+### [2.1.2](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.1...v2.1.2) (2020-09-02)
+
 ### [2.1.1](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.0...v2.1.1) (2020-08-26)
 
 ## [2.1.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.4...v2.1.0) (2020-08-19)
