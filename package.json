@@ -85,7 +85,7 @@
     "figlet": "1.5.0",
     "globby": "11.0.3",
     "kleur": "4.1.4",
-    "prompts": "2.4.0"
+    "prompts": "2.4.1"
   },
   "config": {
     "commitizen": {
