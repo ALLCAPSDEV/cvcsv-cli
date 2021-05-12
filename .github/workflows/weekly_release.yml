@@ -55,7 +55,7 @@ jobs:
       - run: git fetch --prune --unshallow
       - run: git checkout master
       - name: pull-request
-        uses: repo-sync/pull-request@v2
+        uses: repo-sync/pull-request@v2.6
         with:
           source_branch: "master"
           destination_branch: "develop"
