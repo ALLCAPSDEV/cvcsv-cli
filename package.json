@@ -57,7 +57,7 @@
     "@liftr/tscov": "2.0.0",
     "@rollup/plugin-node-resolve": "13.0.0",
     "@tsconfig/recommended": "1.0.1",
-    "@types/figlet": "1.5.1",
+    "@types/figlet": "1.5.2",
     "@types/jest": "26.0.24",
     "@types/node": "16.0.0",
     "@types/prompts": "2.0.14",
