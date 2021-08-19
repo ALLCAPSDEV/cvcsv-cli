@@ -5,21 +5,9 @@ describe("buildData", () => {
   let mockStdoutWrite: jest.SpyInstance<
     boolean,
     [
-      string | Uint8Array,
-      (
-        | "ascii"
-        | "utf8"
-        | "utf-8"
-        | "utf16le"
-        | "ucs2"
-        | "ucs-2"
-        | "base64"
-        | "latin1"
-        | "binary"
-        | "hex"
-        | undefined
-      )?,
-      (((err?: Error | undefined) => void) | undefined)?
+      str: string | Uint8Array,
+      encoding?: BufferEncoding,
+      cb?: (err?: Error) => void
     ]
   >;
 
