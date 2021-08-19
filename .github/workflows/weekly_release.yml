@@ -2,6 +2,7 @@ name: Weekly Release
 on:
   schedule:
     - cron: "00 10 * * 3"
+  workflow_dispatch:
 jobs:
   build-release:
     name: Create a release
