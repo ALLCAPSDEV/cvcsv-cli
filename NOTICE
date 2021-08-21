@@ -1,4 +1,4 @@
-** fastq; version 1.10.0 -- https://github.com/mcollina/fastq#readme
+** fastq; version 1.11.1 -- https://github.com/mcollina/fastq#readme
 
 Copyright (c) 2015-2020, Matteo Collina <matteo.collina@gmail.com>
 
@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ------
 
-** glob-parent; version 5.1.1 -- https://github.com/gulpjs/glob-parent#readme
+** glob-parent; version 5.1.2 -- https://github.com/gulpjs/glob-parent#readme
 Copyright (c) 2015, 2019 Elan Shanker
 
 The ISC License
@@ -35,6 +35,26 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
 IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+------
+
+** array-union; version 3.0.1 -- https://github.com/sindresorhus/array-union#readme
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+** globby; version 12.0.1 -- https://github.com/sindresorhus/globby#readme
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+** slash; version 4.0.0 -- https://github.com/sindresorhus/slash#readme
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+
+MIT License
+
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 ------
@@ -126,15 +146,7 @@ THE SOFTWARE.
 
 ------
 
-** figlet; version 1.5.0 -- https://github.com/patorjk/figlet.js#readme
-(c) COPYRIGHTS MMIV
-(c) Michel Eftimakis 1995
-Copyright (c) 2000 Michael Hamm.
-copyright 1993, RSA Laboratories
-(c) 1994 by Victor Parada (vparada@inf.utfsm.cl)
-Copyright 1996, 1997 by John Cowan and Paul Burton
-Portions Copyright 1991, 1993, 1994 by Glenn Chappell and Ian Chai
-Copyright (c) 2014-present Patrick Gillespie and other contributors
+** figlet; version 1.5.2 -- https://github.com/patorjk/figlet.js#readme
 
 The MIT License (MIT)
 
@@ -203,7 +215,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ------
 
-** prompts; version 2.4.0 -- https://github.com/terkelg/prompts#readme
+** prompts; version 2.4.1 -- https://github.com/terkelg/prompts#readme
+(c) Terkel Gjervig (https://terkel.com)
+Copyright (c) 2018 Terkel Gjervig Nielsen
 ** sisteransi; version 1.0.5 -- https://github.com/terkelg/sisteransi#readme
 (c) Terkel Gjervig (https://terkel.com)
 Copyright (c) 2018 Terkel Gjervig Nielsen
@@ -262,13 +276,13 @@ THE SOFTWARE.
 
 ------
 
-** @nodelib/fs.scandir; version 2.1.4 -- 
+** @nodelib/fs.scandir; version 2.1.5 -- 
 Copyright (c) Denis Malinochkin
-** @nodelib/fs.stat; version 2.0.4 -- 
+** @nodelib/fs.stat; version 2.0.5 -- 
 Copyright (c) Denis Malinochkin
-** @nodelib/fs.walk; version 1.2.6 -- 
+** @nodelib/fs.walk; version 1.2.8 -- 
 Copyright (c) Denis Malinochkin
-** fast-glob; version 3.2.4 -- https://github.com/mrmlnc/fast-glob#readme
+** fast-glob; version 3.2.7 -- https://github.com/mrmlnc/fast-glob#readme
 Copyright (c) Denis Malinochkin
 
 The MIT License (MIT)
@@ -371,7 +385,7 @@ THE SOFTWARE.
 
 ------
 
-** picomatch; version 2.2.2 -- https://github.com/micromatch/picomatch
+** picomatch; version 2.3.0 -- https://github.com/micromatch/picomatch
 Copyright (c) 2017-present, Jon Schlinkert.
 Copyright (c) 2017-present, Jon Schlinkert (https://github.com/jonschlinkert).
 
@@ -400,7 +414,10 @@ THE SOFTWARE.
 
 ------
 
-** run-parallel; version 1.1.10 -- https://github.com/feross/run-parallel
+** queue-microtask; version 1.2.3 -- https://github.com/feross/queue-microtask
+Copyright (c) Feross Aboukhadijeh
+Copyright (c) Feross Aboukhadijeh (https://feross.org).
+** run-parallel; version 1.2.0 -- https://github.com/feross/run-parallel
 Copyright (c) Feross Aboukhadijeh
 Copyright (c) Feross Aboukhadijeh (http://feross.org).
 
@@ -428,15 +445,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ------
 
-** array-union; version 2.1.0 -- https://github.com/sindresorhus/array-union#readme
-(c) Sindre Sorhus (https://sindresorhus.com)
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-** globby; version 11.0.2 -- https://github.com/sindresorhus/globby#readme
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 ** path-type; version 4.0.0 -- https://github.com/sindresorhus/path-type#readme
-(c) Sindre Sorhus (https://sindresorhus.com)
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-** slash; version 3.0.0 -- https://github.com/sindresorhus/slash#readme
 (c) Sindre Sorhus (https://sindresorhus.com)
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -459,9 +468,8 @@ Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
 ** is-number; version 7.0.0 -- https://github.com/jonschlinkert/is-number
 Copyright (c) 2014-present, Jon Schlinkert.
 Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
-** micromatch; version 4.0.2 -- https://github.com/micromatch/micromatch
+** micromatch; version 4.0.4 -- https://github.com/micromatch/micromatch
 Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
 
 The MIT License (MIT)
 
