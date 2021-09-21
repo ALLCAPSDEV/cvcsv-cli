@@ -58,7 +58,7 @@
     "@rollup/plugin-node-resolve": "13.0.4",
     "@tsconfig/recommended": "1.0.1",
     "@types/figlet": "1.5.4",
-    "@types/jest": "27.0.1",
+    "@types/jest": "27.0.2",
     "@types/node": "16.9.4",
     "@types/prompts": "2.0.14",
     "babel-loader": "8.2.2",
