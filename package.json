@@ -55,7 +55,7 @@
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@liftr/tscov": "2.0.0",
-    "@rollup/plugin-node-resolve": "13.0.4",
+    "@rollup/plugin-node-resolve": "13.0.5",
     "@tsconfig/recommended": "1.0.1",
     "@types/figlet": "1.5.4",
     "@types/jest": "27.0.2",
