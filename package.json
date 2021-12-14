@@ -51,7 +51,7 @@
   "homepage": "https://github.com/allcapsdev/cvcsv-cli#readme",
   "devDependencies": {
     "@arkweid/lefthook": "0.7.7",
-    "@babel/core": "7.16.0",
+    "@babel/core": "7.16.5",
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@liftr/tscov": "2.0.0",
