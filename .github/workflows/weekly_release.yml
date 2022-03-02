@@ -8,7 +8,7 @@ jobs:
     name: Create a release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - name: Run release script
         run: ./scripts/release.sh
         env:
@@ -18,7 +18,7 @@ jobs:
     needs: build-release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - run: git fetch --prune --unshallow
       - run: git checkout master
       - uses: actions/setup-node@v3.0.0
@@ -34,7 +34,7 @@ jobs:
     needs: build-release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - run: git fetch --prune --unshallow
       - run: git checkout master
       - uses: actions/setup-node@v3.0.0
@@ -52,7 +52,7 @@ jobs:
     needs: build-release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - run: git fetch --prune --unshallow
       - run: git checkout master
       - name: pull-request
