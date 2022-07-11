@@ -23,7 +23,7 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json')}}
-      - uses: actions/setup-node@v3.3.0
+      - uses: actions/setup-node@v3.4.0
         with:
           node-version: "12"
       - name: Install Deps if no cache
