@@ -47,7 +47,7 @@ export class Config {
         const json: ConfigFileObj = JSON.parse(file);
         return json;
       } catch (error) {
-        throw Error(error);
+        throw Error(error as any);
       }
     }
     return null;
