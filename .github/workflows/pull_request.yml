@@ -8,10 +8,10 @@ jobs:
       matrix:
         node_version: [12, 14, 16]
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
       - name: npm cache
         id: npm-cache
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -22,7 +22,7 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit == 'true'
         run: npm run build
       - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v2.4.0
+        uses: actions/setup-node@v3.4.1
         with:
           node-version: ${{ matrix.node_version }}
       - name: Execute tests
@@ -33,7 +33,7 @@ jobs:
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - name: automerge
-        uses: pascalgn/automerge-action@v0.14.2
+        uses: pascalgn/automerge-action@v0.15.3
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_METHOD: "rebase"
@@ -44,36 +44,14 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 5
       - run: git checkout HEAD^2
         if: ${{ github.event_name == 'pull_request' }}
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v1
+        uses: github/codeql-action/init@v2
         with:
           languages: javascript
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
-  OSSAR-Scan:
-    runs-on: windows-latest
-    needs: runTests
-    if: ${{ github.actor != 'dependabot[bot]' }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2.3.4
-        with:
-          fetch-depth: 5
-      - run: git checkout HEAD^2
-        if: ${{ github.event_name == 'pull_request' }}
-      - name: Install .NET
-        uses: actions/setup-dotnet@v1.8.1
-        with:
-          dotnet-version: "3.1.201"
-      - name: Run OSSAR
-        uses: github/ossar-action@v1
-        id: ossar
-      - name: Upload OSSAR results
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: ${{ steps.ossar.outputs.sarifFile }}
+        uses: github/codeql-action/analyze@v2
