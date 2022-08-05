@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.100](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.99...v2.2.100) (2022-08-05)
+
+
+### Bug Fixes
+
+* error when releasing ([ddb26b7](https://github.com/allcapsdev/cvcsv-cli/commit/ddb26b7d0f5d041f31e53502db3c7c3f339af6e0))
+
 ### [2.2.99](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.98...v2.2.99) (2022-08-03)
 
 ### [2.2.98](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.97...v2.2.98) (2022-07-27)
