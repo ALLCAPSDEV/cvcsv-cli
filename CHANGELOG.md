@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.108](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.107...v2.2.108) (2022-08-23)
+
+
+### Bug Fixes
+
+* removed tscov ([a89a95e](https://github.com/allcapsdev/cvcsv-cli/commit/a89a95ecccaa52dc65c35a8a693fb74191351f00))
+
 ### [2.2.107](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.106...v2.2.107) (2022-08-23)
 
 ### [2.2.106](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.105...v2.2.106) (2022-08-23)
