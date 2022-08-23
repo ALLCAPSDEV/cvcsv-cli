@@ -54,12 +54,8 @@ export class CVCSVCLI {
   }
 
   private static async buildData() {
-    const {
-      bucketName,
-      rootDirectory,
-      productCategory,
-      productSet,
-    } = this.config;
+    const { bucketName, rootDirectory, productCategory, productSet } =
+      this.config;
     const paths = await readFiles(rootDirectory);
     if (paths.length < 1) throw Error("No images");
     const fileData: CsvData[] = [];
@@ -113,7 +109,7 @@ export class CVCSVCLI {
       await writer.writeRecords(this.data);
       return true;
     } catch (err) {
-      throw new Error(err);
+      throw new Error(err as string);
     }
   }
 }
