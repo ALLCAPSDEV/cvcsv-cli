@@ -2,7 +2,6 @@ import typescript from "rollup-plugin-typescript2";
 import resolve from "@rollup/plugin-node-resolve";
 import pkg from "./package.json";
 import { terser } from "rollup-plugin-terser";
-import { sizeSnapshot } from "rollup-plugin-size-snapshot";
 
 export default {
   input: "src/index.ts",
@@ -25,7 +24,6 @@ export default {
     typescript({
       typescript: require("typescript"),
     }),
-    sizeSnapshot(),
     terser(),
   ],
 };
