@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ES2020",
-    "lib": ["ES2020"],
+    "target": "es6",
+    "module": "ES2015",
+    "lib": ["es6", "es2015", "dom"],
     "declaration": true,
     "outDir": "lib",
     "strict": true,
@@ -13,8 +13,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
-    "removeComments": true,
-    "moduleResolution": "node"
+    "removeComments": true
   },
   "exclude": ["__test__", "lib", "node_modules"]
 }
