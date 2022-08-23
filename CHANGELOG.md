@@ -6,10 +6,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [2.2.105](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.104...v2.2.105) (2022-08-23)
 
-
 ### Bug Fixes
 
-* rollup issue ([98a1c34](https://github.com/allcapsdev/cvcsv-cli/commit/98a1c34ae542a90b12279fcc7f75d8e1f941a17a))
+- rollup issue ([98a1c34](https://github.com/allcapsdev/cvcsv-cli/commit/98a1c34ae542a90b12279fcc7f75d8e1f941a17a))
 
 ### [2.2.104](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.103...v2.2.104) (2022-08-17)
 
@@ -21,10 +20,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [2.2.100](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.99...v2.2.100) (2022-08-05)
 
-
 ### Bug Fixes
 
-* error when releasing ([ddb26b7](https://github.com/allcapsdev/cvcsv-cli/commit/ddb26b7d0f5d041f31e53502db3c7c3f339af6e0))
+- error when releasing ([ddb26b7](https://github.com/allcapsdev/cvcsv-cli/commit/ddb26b7d0f5d041f31e53502db3c7c3f339af6e0))
 
 ### [2.2.99](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.98...v2.2.99) (2022-08-03)
 
@@ -128,10 +126,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [2.2.49](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.48...v2.2.49) (2021-08-19)
 
-
 ### Bug Fixes
 
-* **import of globby:** `import globby` to `import {globby}` ([a07e45b](https://github.com/allcapsdev/cvcsv-cli/commit/a07e45b98ecd634fafe99768c64899ba6fde2710))
+- **import of globby:** `import globby` to `import {globby}` ([a07e45b](https://github.com/allcapsdev/cvcsv-cli/commit/a07e45b98ecd634fafe99768c64899ba6fde2710))
 
 ### [2.2.48](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.47...v2.2.48) (2021-08-18)
 
@@ -231,31 +228,27 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.2.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.2...v2.2.0) (2020-09-09)
 
-
 ### Features
 
-* **display name:** removes labels from display name ([52d1a11](https://github.com/allcapsdev/cvcsv-cli/commit/52d1a11fc356393b5a7a40a9b743cc1add5c8063))
-* **display name:** removes labels from display name ([9879921](https://github.com/allcapsdev/cvcsv-cli/commit/98799216fd06469714289456d04b666b44f5f781))
-
+- **display name:** removes labels from display name ([52d1a11](https://github.com/allcapsdev/cvcsv-cli/commit/52d1a11fc356393b5a7a40a9b743cc1add5c8063))
+- **display name:** removes labels from display name ([9879921](https://github.com/allcapsdev/cvcsv-cli/commit/98799216fd06469714289456d04b666b44f5f781))
 
 ### Bug Fixes
 
-* **beta-release:** fixes bug ([e7785c9](https://github.com/allcapsdev/cvcsv-cli/commit/e7785c9e178ab6ac9fe8d76607597bdc6265abfe))
-* **fix the fix:** should now publish ([49c45ff](https://github.com/allcapsdev/cvcsv-cli/commit/49c45ff7abcb58ae528860479b4b1826c8a9b516))
+- **beta-release:** fixes bug ([e7785c9](https://github.com/allcapsdev/cvcsv-cli/commit/e7785c9e178ab6ac9fe8d76607597bdc6265abfe))
+- **fix the fix:** should now publish ([49c45ff](https://github.com/allcapsdev/cvcsv-cli/commit/49c45ff7abcb58ae528860479b4b1826c8a9b516))
 
 ## [2.2.0-beta.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.2...v2.2.0-beta.0) (2020-09-02)
 
-
 ### Features
 
-* **display name:** removes labels from display name ([52d1a11](https://github.com/allcapsdev/cvcsv-cli/commit/52d1a11fc356393b5a7a40a9b743cc1add5c8063))
-* **display name:** removes labels from display name ([9879921](https://github.com/allcapsdev/cvcsv-cli/commit/98799216fd06469714289456d04b666b44f5f781))
-
+- **display name:** removes labels from display name ([52d1a11](https://github.com/allcapsdev/cvcsv-cli/commit/52d1a11fc356393b5a7a40a9b743cc1add5c8063))
+- **display name:** removes labels from display name ([9879921](https://github.com/allcapsdev/cvcsv-cli/commit/98799216fd06469714289456d04b666b44f5f781))
 
 ### Bug Fixes
 
-* **beta-release:** fixes bug ([e7785c9](https://github.com/allcapsdev/cvcsv-cli/commit/e7785c9e178ab6ac9fe8d76607597bdc6265abfe))
-* **fix the fix:** should now publish ([49c45ff](https://github.com/allcapsdev/cvcsv-cli/commit/49c45ff7abcb58ae528860479b4b1826c8a9b516))
+- **beta-release:** fixes bug ([e7785c9](https://github.com/allcapsdev/cvcsv-cli/commit/e7785c9e178ab6ac9fe8d76607597bdc6265abfe))
+- **fix the fix:** should now publish ([49c45ff](https://github.com/allcapsdev/cvcsv-cli/commit/49c45ff7abcb58ae528860479b4b1826c8a9b516))
 
 ### [2.1.2](https://github.com/allcapsdev/cvcsv-cli/compare/v2.1.1...v2.1.2) (2020-09-02)
 
@@ -263,15 +256,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.1.0](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.4...v2.1.0) (2020-08-19)
 
-
 ### Features
 
-* **labels:** custom labels are possible ([bc034bf](https://github.com/allcapsdev/cvcsv-cli/commit/bc034bf09b2d8528973e040683dca13d0aa8739f)), closes [#424](https://github.com/allcapsdev/cvcsv-cli/issues/424)
-
+- **labels:** custom labels are possible ([bc034bf](https://github.com/allcapsdev/cvcsv-cli/commit/bc034bf09b2d8528973e040683dca13d0aa8739f)), closes [#424](https://github.com/allcapsdev/cvcsv-cli/issues/424)
 
 ### Bug Fixes
 
-* **lefthook:** fixed commitlint ([67838b1](https://github.com/allcapsdev/cvcsv-cli/commit/67838b1231c0ea02244e41953e9746c4f852d3a6))
+- **lefthook:** fixed commitlint ([67838b1](https://github.com/allcapsdev/cvcsv-cli/commit/67838b1231c0ea02244e41953e9746c4f852d3a6))
 
 ### [2.0.4](https://github.com/allcapsdev/cvcsv-cli/compare/v2.0.3...v2.0.4) (2020-08-17)
 
