@@ -13,7 +13,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
-    "removeComments": true
+    "removeComments": true,
+    "moduleResolution": "Node"
   },
   "exclude": ["__test__", "lib", "node_modules"]
 }
