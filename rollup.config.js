@@ -19,7 +19,7 @@ export default {
   ],
   plugins: [
     resolve({
-      extensions: [".js", ".ts"],
+      extensions: [".ts"],
     }),
     typescript({
       typescript: require("typescript"),

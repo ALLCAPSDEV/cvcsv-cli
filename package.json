@@ -41,7 +41,7 @@
     "CLI",
     "bulk import"
   ],
-  "author": "",
+  "author": "Matt Riley",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/allcapsdev/cvcsv-cli/issues"
@@ -78,8 +78,8 @@
   },
   "dependencies": {
     "csv-writer": "1.6.0",
+    "fast-glob": "3.2.11",
     "figlet": "1.5.2",
-    "globby": "13.1.2",
     "kleur": "4.1.5",
     "prompts": "2.4.2"
   },
