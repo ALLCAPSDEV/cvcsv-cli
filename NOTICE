@@ -1,4 +1,4 @@
-** fastq; version 1.11.1 -- https://github.com/mcollina/fastq#readme
+** fastq; version 1.13.0 -- https://github.com/mcollina/fastq#readme
 
 Copyright (c) 2015-2020, Matteo Collina <matteo.collina@gmail.com>
 
@@ -39,9 +39,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ------
 
-** array-union; version 3.0.1 -- https://github.com/sindresorhus/array-union#readme
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-** globby; version 12.0.1 -- https://github.com/sindresorhus/globby#readme
+** globby; version 13.1.2 -- https://github.com/sindresorhus/globby#readme
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
 ** slash; version 4.0.0 -- https://github.com/sindresorhus/slash#readme
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
@@ -59,9 +57,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ------
 
-** is-glob; version 4.0.1 -- https://github.com/micromatch/is-glob
-Copyright (c) 2014-2017, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
+** is-glob; version 4.0.3 -- https://github.com/micromatch/is-glob
+Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert)
 
 The MIT License (MIT)
 
@@ -118,8 +116,8 @@ SOFTWARE.
 ------
 
 ** braces; version 3.0.2 -- https://github.com/micromatch/braces
-Copyright (c) 2014-2018, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-2018, Jon Schlinkert
+Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert)
 
 The MIT License (MIT)
 
@@ -147,6 +145,14 @@ THE SOFTWARE.
 ------
 
 ** figlet; version 1.5.2 -- https://github.com/patorjk/figlet.js#readme
+(c) COPYRIGHTS MMIV
+(c) Michel Eftimakis 1995
+Copyright (c) 2000 Michael Hamm.
+copyright 1993, RSA Laboratories
+(c) 1994 by Victor Parada (vparada@inf.utfsm.cl)
+Copyright 1996, 1997 by John Cowan and Paul Burton
+Portions Copyright 1991, 1993, 1994 by Glenn Chappell and Ian Chai
+Copyright (c) 2014-present Patrick Gillespie and other contributors
 
 The MIT License (MIT)
 
@@ -172,7 +178,7 @@ THE SOFTWARE.
 
 ------
 
-** ignore; version 5.1.8 -- https://github.com/kaelzhang/node-ignore#readme
+** ignore; version 5.2.0 -- https://github.com/kaelzhang/node-ignore#readme
 Copyright (c) 2013 Kael Zhang <i@kael.me> , contributors http://kael.me
 
 Copyright (c) 2013 Kael Zhang <i@kael.me>, contributors
@@ -215,7 +221,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ------
 
-** prompts; version 2.4.1 -- https://github.com/terkelg/prompts#readme
+** prompts; version 2.4.2 -- https://github.com/terkelg/prompts#readme
 (c) Terkel Gjervig (https://terkel.com)
 Copyright (c) 2018 Terkel Gjervig Nielsen
 ** sisteransi; version 1.0.5 -- https://github.com/terkelg/sisteransi#readme
@@ -248,8 +254,8 @@ SOFTWARE.
 ------
 
 ** is-extglob; version 2.1.1 -- https://github.com/jonschlinkert/is-extglob
-Copyright (c) 2014-2016, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2016, Jon Schlinkert (https://github.com/jonschlinkert)
 
 The MIT License (MIT)
 
@@ -282,7 +288,7 @@ Copyright (c) Denis Malinochkin
 Copyright (c) Denis Malinochkin
 ** @nodelib/fs.walk; version 1.2.8 -- 
 Copyright (c) Denis Malinochkin
-** fast-glob; version 3.2.7 -- https://github.com/mrmlnc/fast-glob#readme
+** fast-glob; version 3.2.11 -- https://github.com/mrmlnc/fast-glob#readme
 Copyright (c) Denis Malinochkin
 
 The MIT License (MIT)
@@ -311,8 +317,8 @@ SOFTWARE.
 ------
 
 ** to-regex-range; version 5.0.1 -- https://github.com/micromatch/to-regex-range
-Copyright (c) 2015-present, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2015-present, Jon Schlinkert
+Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert)
 
 The MIT License (MIT)
 
@@ -353,10 +359,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ------
 
-** kleur; version 4.1.4 -- https://github.com/lukeed/kleur#readme
+** kleur; version 3.0.3 -- https://github.com/lukeed/kleur#readme
 (c) Luke Edwards (https://lukeed.com)
 Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
-** kleur; version 3.0.3 -- https://github.com/lukeed/kleur#readme
+** kleur; version 4.1.5 -- https://github.com/lukeed/kleur#readme
 (c) Luke Edwards (https://lukeed.com)
 Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
 
@@ -385,9 +391,9 @@ THE SOFTWARE.
 
 ------
 
-** picomatch; version 2.3.0 -- https://github.com/micromatch/picomatch
-Copyright (c) 2017-present, Jon Schlinkert.
-Copyright (c) 2017-present, Jon Schlinkert (https://github.com/jonschlinkert).
+** picomatch; version 2.3.1 -- https://github.com/micromatch/picomatch
+Copyright (c) 2017-present, Jon Schlinkert
+Copyright (c) 2017-present, Jon Schlinkert (https://github.com/jonschlinkert)
 
 The MIT License (MIT)
 
@@ -416,10 +422,10 @@ THE SOFTWARE.
 
 ** queue-microtask; version 1.2.3 -- https://github.com/feross/queue-microtask
 Copyright (c) Feross Aboukhadijeh
-Copyright (c) Feross Aboukhadijeh (https://feross.org).
+Copyright (c) Feross Aboukhadijeh (https://feross.org)
 ** run-parallel; version 1.2.0 -- https://github.com/feross/run-parallel
 Copyright (c) Feross Aboukhadijeh
-Copyright (c) Feross Aboukhadijeh (http://feross.org).
+Copyright (c) Feross Aboukhadijeh (http://feross.org)
 
 The MIT License (MIT)
 
@@ -463,13 +469,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ------
 
 ** fill-range; version 7.0.1 -- https://github.com/jonschlinkert/fill-range
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert).
+Copyright (c) 2014-present, Jon Schlinkert
+Copyright (c) 2019, Jon Schlinkert (https://github.com/jonschlinkert)
 ** is-number; version 7.0.0 -- https://github.com/jonschlinkert/is-number
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert).
-** micromatch; version 4.0.4 -- https://github.com/micromatch/micromatch
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-present, Jon Schlinkert
+Copyright (c) 2018, Jon Schlinkert (https://github.com/jonschlinkert)
+** micromatch; version 4.0.5 -- https://github.com/micromatch/micromatch
+Copyright (c) 2014-present, Jon Schlinkert
+Copyright (c) 2022, Jon Schlinkert (https://github.com/jonschlinkert)
 
 The MIT License (MIT)
 
@@ -497,6 +504,7 @@ THE SOFTWARE.
 ------
 
 ** merge2; version 1.4.1 -- https://github.com/teambition/merge2
+Copyright (c) 2014-2020 Teambition
 
 The MIT License (MIT)
 
