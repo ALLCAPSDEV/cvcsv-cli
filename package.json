@@ -57,7 +57,7 @@
     "@types/figlet": "1.5.5",
     "@types/jest": "28.1.7",
     "@types/node": "18.8.2",
-    "@types/prompts": "2.0.14",
+    "@types/prompts": "2.4.1",
     "babel-loader": "8.2.5",
     "commitizen": "4.2.5",
     "cz-conventional-changelog": "3.3.0",
