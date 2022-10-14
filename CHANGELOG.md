@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.115](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.114...v2.2.115) (2022-10-12)
+
+### [2.2.114](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.113...v2.2.114) (2022-10-05)
+
+### [2.2.113](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.112...v2.2.113) (2022-09-28)
+
+### [2.2.112](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.111...v2.2.112) (2022-09-21)
+
+### [2.2.111](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.110...v2.2.111) (2022-09-14)
+
+### [2.2.110](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.109...v2.2.110) (2022-09-07)
+
+### [2.2.109](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.108...v2.2.109) (2022-08-31)
+
+
+### Bug Fixes
+
+* globby is a pain ([ec0da13](https://github.com/allcapsdev/cvcsv-cli/commit/ec0da130ec51c16101abd034118b5d4368cb1d2f))
+* typedoc now works too ([e61aa7e](https://github.com/allcapsdev/cvcsv-cli/commit/e61aa7ec40d3178b7348837926f02524a6960c96))
 
 ### [2.2.108](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.107...v2.2.108) (2022-08-23)
 
