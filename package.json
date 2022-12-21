@@ -51,12 +51,12 @@
     "@babel/core": "7.20.5",
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "^17.0.0",
-    "@evilmartians/lefthook": "1.2.5",
+    "@evilmartians/lefthook": "1.2.6",
     "@rollup/plugin-node-resolve": "15.0.1",
     "@tsconfig/recommended": "1.0.1",
     "@types/figlet": "1.5.5",
     "@types/jest": "28.1.7",
-    "@types/node": "18.11.14",
+    "@types/node": "18.11.17",
     "@types/prompts": "2.4.2",
     "babel-loader": "9.1.0",
     "commitizen": "4.2.6",
@@ -73,7 +73,7 @@
     "ts-jest": "26.5.6",
     "ts-loader": "9.4.2",
     "ts-node": "10.9.1",
-    "typedoc": "0.23.22",
+    "typedoc": "0.23.23",
     "typescript": "4.9.4"
   },
   "dependencies": {
