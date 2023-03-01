@@ -1,6 +1,6 @@
 {
   "name": "@allcapsdev/cvcsv-cli",
-  "version": "2.2.134",
+  "version": "2.2.135",
   "description": "CLI for creating CSV for Cloud Vision Product Search API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
