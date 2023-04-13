@@ -49,7 +49,7 @@
   "homepage": "https://github.com/allcapsdev/cvcsv-cli#readme",
   "devDependencies": {
     "@babel/core": "7.21.4",
-    "@commitlint/cli": "17.5.1",
+    "@commitlint/cli": "17.6.0",
     "@commitlint/config-conventional": "^17.0.0",
     "@evilmartians/lefthook": "1.3.10",
     "@rollup/plugin-node-resolve": "15.0.2",
