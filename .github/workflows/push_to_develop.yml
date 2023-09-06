@@ -7,7 +7,7 @@ jobs:
     name: Create Notice File
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: ClearlyNoticed Action
         uses: dabutvin/chive-action@1.1.0
         env:
