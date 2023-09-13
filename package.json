@@ -51,7 +51,7 @@
     "@babel/core": "7.22.17",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "^17.0.0",
-    "@evilmartians/lefthook": "1.4.10",
+    "@evilmartians/lefthook": "1.4.11",
     "@rollup/plugin-node-resolve": "15.2.1",
     "@tsconfig/recommended": "1.0.2",
     "@types/figlet": "1.5.6",
