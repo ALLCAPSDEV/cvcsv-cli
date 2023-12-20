@@ -22,7 +22,7 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit == 'true'
         run: npm run build
       - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v4.0.0
+        uses: actions/setup-node@v4.0.1
         with:
           node-version: ${{ matrix.node_version }}
       - name: Execute tests
@@ -39,8 +39,8 @@ jobs:
       - run: git checkout HEAD^2
         if: ${{ github.event_name == 'pull_request' }}
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: javascript
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
