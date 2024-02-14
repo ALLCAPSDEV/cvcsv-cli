@@ -22,7 +22,7 @@ jobs:
         if: steps.npm-cache.outputs.cache-hit == 'true'
         run: npm run build
       - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v4.0.1
+        uses: actions/setup-node@v4.0.2
         with:
           node-version: ${{ matrix.node_version }}
       - name: Execute tests
