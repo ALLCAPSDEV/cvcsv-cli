@@ -2,6 +2,110 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.188](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.187...v2.2.188) (2024-03-06)
+
+### [2.2.187](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.186...v2.2.187) (2024-02-28)
+
+### [2.2.186](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.185...v2.2.186) (2024-02-21)
+
+### [2.2.185](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.184...v2.2.185) (2024-02-14)
+
+### [2.2.184](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.183...v2.2.184) (2024-02-07)
+
+### [2.2.183](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.182...v2.2.183) (2024-01-31)
+
+### [2.2.182](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.181...v2.2.182) (2024-01-24)
+
+### [2.2.181](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.180...v2.2.181) (2024-01-17)
+
+### [2.2.180](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.179...v2.2.180) (2024-01-10)
+
+### [2.2.179](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.178...v2.2.179) (2024-01-03)
+
+### [2.2.178](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.177...v2.2.178) (2023-12-27)
+
+### [2.2.177](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.176...v2.2.177) (2023-12-20)
+
+### [2.2.176](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.175...v2.2.176) (2023-12-13)
+
+### [2.2.175](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.174...v2.2.175) (2023-12-06)
+
+### [2.2.174](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.173...v2.2.174) (2023-11-29)
+
+### [2.2.173](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.172...v2.2.173) (2023-11-22)
+
+### [2.2.172](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.171...v2.2.172) (2023-11-15)
+
+### [2.2.171](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.170...v2.2.171) (2023-11-08)
+
+### [2.2.170](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.169...v2.2.170) (2023-11-01)
+
+### [2.2.169](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.168...v2.2.169) (2023-10-25)
+
+### [2.2.168](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.167...v2.2.168) (2023-10-18)
+
+### [2.2.167](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.166...v2.2.167) (2023-10-11)
+
+### [2.2.166](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.165...v2.2.166) (2023-10-04)
+
+### [2.2.165](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.164...v2.2.165) (2023-09-27)
+
+### [2.2.164](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.163...v2.2.164) (2023-09-20)
+
+### [2.2.163](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.162...v2.2.163) (2023-09-13)
+
+### [2.2.162](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.161...v2.2.162) (2023-09-06)
+
+### [2.2.161](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.160...v2.2.161) (2023-08-30)
+
+### [2.2.160](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.159...v2.2.160) (2023-08-23)
+
+### [2.2.159](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.158...v2.2.159) (2023-08-16)
+
+### [2.2.158](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.157...v2.2.158) (2023-08-09)
+
+### [2.2.157](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.156...v2.2.157) (2023-08-02)
+
+### [2.2.156](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.155...v2.2.156) (2023-07-26)
+
+### [2.2.155](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.154...v2.2.155) (2023-07-19)
+
+### [2.2.154](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.153...v2.2.154) (2023-07-12)
+
+### [2.2.153](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.152...v2.2.153) (2023-07-05)
+
+### [2.2.152](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.151...v2.2.152) (2023-06-28)
+
+### [2.2.151](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.150...v2.2.151) (2023-06-21)
+
+### [2.2.150](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.149...v2.2.150) (2023-06-14)
+
+### [2.2.149](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.148...v2.2.149) (2023-06-07)
+
+### [2.2.148](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.147...v2.2.148) (2023-05-31)
+
+### [2.2.147](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.146...v2.2.147) (2023-05-24)
+
+### [2.2.146](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.145...v2.2.146) (2023-05-17)
+
+### [2.2.145](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.144...v2.2.145) (2023-05-10)
+
+### [2.2.144](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.143...v2.2.144) (2023-05-03)
+
+### [2.2.143](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.142...v2.2.143) (2023-04-26)
+
+### [2.2.142](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.141...v2.2.142) (2023-04-19)
+
+### [2.2.141](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.140...v2.2.141) (2023-04-12)
+
+### [2.2.140](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.139...v2.2.140) (2023-04-05)
+
+### [2.2.139](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.138...v2.2.139) (2023-03-29)
+
+### [2.2.138](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.137...v2.2.138) (2023-03-22)
+
+### [2.2.137](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.136...v2.2.137) (2023-03-15)
+
 ### [2.2.136](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.135...v2.2.136) (2023-03-08)
 
 ### [2.2.135](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.134...v2.2.135) (2023-03-01)
