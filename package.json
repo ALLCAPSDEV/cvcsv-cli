@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/allcapsdev/cvcsv-cli#readme",
   "devDependencies": {
-    "@babel/core": "7.24.4",
+    "@babel/core": "7.24.5",
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "^19.0.3",
     "@evilmartians/lefthook": "1.6.10",
