@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.220](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.219...v2.2.220) (2024-10-16)
+
 ### [2.2.219](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.218...v2.2.219) (2024-10-09)
 
 ### [2.2.218](https://github.com/allcapsdev/cvcsv-cli/compare/v2.2.217...v2.2.218) (2024-10-02)
